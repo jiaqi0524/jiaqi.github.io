@@ -1,4 +1,0 @@
-INSERT INTO `dede_addon14` VALUES('20','8','','','127.0.0.1','treason','');
-INSERT INTO `dede_addon14` VALUES('21','8','','','127.0.0.1','Welcome To Maker Cloud!','');
-INSERT INTO `dede_addon14` VALUES('22','8','','','127.0.0.1','Welcome To Maker Cloud！','');
-INSERT INTO `dede_addon14` VALUES('23','8','','','127.0.0.1','专注高端网站设计与开发!','');

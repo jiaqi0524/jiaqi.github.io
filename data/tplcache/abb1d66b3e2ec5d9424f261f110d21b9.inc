@@ -1,1 +1,0 @@
-<span>[field:ID function='GetTotalArc(@me)'/]</span>

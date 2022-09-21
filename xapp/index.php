@@ -1,1 +1,0 @@
-<?phprequire_once(dirname(__file__)."/include/config.php");RunSeoApp();

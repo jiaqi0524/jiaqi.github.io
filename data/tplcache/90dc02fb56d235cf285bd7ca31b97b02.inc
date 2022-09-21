@@ -1,1 +1,0 @@
-<img alt="[field:text/]" src="[field:imgsrc/]" data-image="[field:imgsrc/]" data-description="" />
