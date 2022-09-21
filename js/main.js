@@ -1,445 +1,419 @@
-(function(){
-    var h = window.innerHeight;
-    var w = window.innerWidth;
-    
-    var bg = document.getElementsByClassName("box_bg");
-    
-    if((w/h) >= (1920/1080)){
-        for(var i = 0;i < bg.length; i++){
-           bg[i].style.width = w + 'px';
-           bg[i].style.height = w * (1080/1920) + 'px';
-           bg[i].style.top = -(w * (1080/1920) - h)/2 + 'px';
-           bg[i].style.left = '0';
-        }
+// 获取id
+function id(obj) {
+    return document.getElementById(obj);
+}
+// 增加class名称
+function addClass(obj, sClass) { 
+    var aClass = obj.className.split(' ');
+    if (!obj.className) {
+        obj.className = sClass;
+        return;
     }
-    else{
-        for(var i = 0; i < bg.length; i++){
-            bg[i].style.height = h + 'px';
-            bg[i].style.width = h*(1920/1080) + 'px';
-            bg[i].style.left = -(h*(1920/1080) - w)/2 + 'px';
-            bg[i].style.top = '0';
-        }
+    for (var i = 0; i < aClass.length; i++) {
+        if (aClass[i] === sClass) return;
     }
-    
-    var box01_index = 0;
-    var box01_p = document.getElementById('box01_text').children;
-    function boxOne() {
-        if(box01_index >=0 && box01_index <= 2){
-            box01_p[box01_index].style.opacity = '1';
-            box01_index ++;
-        }
-        else{
-            clearInterval(boxOneTimer);
-        }
-    }
-   
-    var x_arr = new Array();
-    var y_arr = new Array();
-    var x = y = m =0;
-    for(var i = 0; i < 800; i++){
-        if(i >= 400){
-            x = m;
-            y = 200 + Math.sqrt(40000 - Math.pow(x-200,2));
-            m--;
-        }
-        else{
-            x = m;
-            y = 200 - Math.sqrt(40000 - Math.pow(x-200,2));
-            m++;
-        }
-        x_arr[i] = x - 60;
-        y_arr[i] = parseInt(y) - 25;
-    }
-
-    /*
-     *原型轨迹
-     */
-    var gitMove = document.getElementById('github_a');
-    var weiboMove = document.getElementById('weibo_a')
-    var blogMove = document.getElementById('blog_a')
-    var g_num = 0;
-    var w_num = 0;
-    var b_num = 0;
-    function movegit(){
-        if(g_num <= 750){
-            // gitMove.css({"left":x_arr[g_num] + "px","top":y_arr[g_num]+"px"});
-            gitMove.style.left = x_arr[g_num] + 'px';
-            gitMove.style.top = y_arr[g_num] + 'px';
-            g_num += 3;
-        }
-        else{
-            clearInterval(gitTimer);
-        }
-    }
-
-    function moveweibo(){
-        if(w_num <= 400){
-            // weiboMove.css({"left":x_arr[w_num]+"px","top":y_arr[w_num]});
-            weiboMove.style.left = x_arr[w_num] + 'px';
-            weiboMove.style.top = y_arr[w_num] + 'px';
-            w_num += 3;
-        }
-        else{
-            clearInterval(weiTimer);
-        }
-    }
-
-    function moveblog(){
-        if(b_num <= 90){
-            // blogMove.css({"left":x_arr[b_num]+"px","top":y_arr[b_num]});
-            blogMove.style.left = x_arr[b_num] + 'px';
-            blogMove.style.top = y_arr[b_num] + 'px';
-            b_num += 3;
-        }
-        else{
-            clearInterval(blogTimer);
-        }
-    }
-
-    movegit();
-    var gitTimer=setInterval(movegit,1);
-    moveweibo();
-    var weiTimer=setInterval(moveweibo,1);
-    moveblog();
-    var blogTimer=setInterval(moveblog,1);
-    
-    //第一屏文字加载
-     var boxOneTimer = setInterval(boxOne,800);
-})();
-
-var f_btn = document.getElementById("float_btn").children;
-var nav_ul = document.getElementById('nav_ul').children;
-var wrapBox = document.getElementById("wrapBox");
-var foot = document.getElementById("foot");
-var arrow = document.getElementsByClassName("arrow_img");
-var bg = document.getElementsByClassName("box_bg");
-var boxs = document.getElementsByClassName("box");
-var indexs = 0;
-var process = document.getElementById('bar_container').children;//进度条
-var box02_flag = false;       //还未曾到第二屏
-var box02_text = document.getElementById('box02_text').children; //第二屏文字
-var box02_index = 0;
-var box02_timer;
-
-
-function hasClass(obj, cls) {  
-    return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));  
+    obj.className += ' ' + sClass;
 }
 
-function addActive() {
-    for(var i = 0; i < process.length ; i++){
-        if(!hasClass(process[i],'active')){
-            process[i].className += ' active';
+function removeClass(obj, sClass) { 
+    var aClass = obj.className.split(' ');
+    if (!obj.className) return;
+    for (var i = 0; i < aClass.length; i++) {
+        if (aClass[i] === sClass) {
+            aClass.splice(i, 1);
+            obj.className = aClass.join(' ');
+            break;
         }
     }
 }
 
-//第二屏动画
-function boxTow() {
-    if(box02_index >= 0 && box02_index < box02_text.length){
-        box02_text[box02_index].style.right = '0';
-        box02_index++;
-    }
-    else{
-        clearInterval(box02_timer);
-    }
+function myBrowser(){
+    var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+    var isOpera = userAgent.indexOf("Opera") > -1;
+    if (isOpera) {
+        return "Opera"
+    }; //判断是否Opera浏览器
+    if (userAgent.indexOf("Firefox") > -1) {
+        return "FF";
+    } //判断是否Firefox浏览器
+    if (userAgent.indexOf("Chrome") > -1){
+  return "Chrome";
+ }
+    if (userAgent.indexOf("Safari") > -1) {
+        return "Safari";
+    } //判断是否Safari浏览器
+    if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
+        return "IE";
+    }; //判断是否IE浏览器
 }
-  
-//滚动函数
-function divMove(obj,overHeight,num){
-    if(obj.offsetTop >= overHeight){
-        //向下滚动
-        var timer;
-        timer = setInterval(function(){
-            if((obj.offsetTop - overHeight) <= num && (obj.offsetTop - overHeight) > 0){
-                obj.style.top  = overHeight + 'px';
-                clearInterval(timer);
+
+function view() {
+    return {
+        w: document.documentElement.clientWidth || document.body.clientWidth,
+        h: document.documentElement.clientHeight || document.body.clientHeight
+    };
+}
+var viewHeight=function(){
+	var section=document.getElementsByTagName("section");
+	var iheight=view().h;
+	section[0].style.height=iheight;
+	for (var i = 0; i < section.length; i++) {
+		section[i].style.height=iheight+"px";
+
+	}
+}
+var waited_develop=function(){
+    var waitedli=document.getElementsByClassName("nav_bar_ul")[0].children;
+    // var waiteda=waitedli.children;
+    console.log(waitedli);
+    // console.log(waiteda);
+    
+    for (var i=1;i<waitedli.length;i++){
+        if(waitedli[i].addEventListener){
+            waitedli[i].addEventListener("click",myfunction,false);
+                function myfunction(){
+            alert("待开发");
+        }
+
+        }
+        if(waitedli[i].attachEvent){
+            waitedli[i].attachEvent("onclick",myfunction); 
+            function myfunction(){
+                alert("待开发");
             }
-            else if((obj.offsetTop - overHeight) > num){
-                obj.style.top = obj.offsetTop - num + 'px';
+        }
+    }
+}
+var tagSwitch=function() 
+{
+	var navP=document.getElementById("nav_bar");
+	var next=document.getElementsByClassName("scroll");
+    var con=document.getElementsByTagName("section");
+    var tag=document.getElementsByTagName("aside")[0].children;
+    con[0].style.display="block";
+    tag[0].className="cur_a";
+    for (var i = 0; i < tag.length; i++) {
+    	tag[i].index=i;
+    	tag[i].onclick=function(){
+    		for (var n = 0; n < tag.length; n++) {
+    			tag[n].className="";
+    			con[n].style.display="none";
+    		}
+    		tag[this.index].className="cur_a";
+    		con[this.index].style.display="block";
+    	}
+    }
+    for (var i = 0; i < next.length; i++) {
+    	next[i].index=i;
+    	tag[i].index=i;
+    	next[i].onclick=function(){
+    		for (var n = 0; n < next.length; n++) {
+    			tag[n].className="";
+    			con[n].style.display="none";
+    		}
+    		con[this.index+1].style.display="block";
+    		tag[this.index+1].className="cur_a";
+
+    	}
+    }
+}
+// html5--canvas
+var canvashtml5 = document.getElementById("html5").getContext("2d");
+var canvascss3=document.getElementById("css3").getContext("2d");
+var canvasjs=document.getElementById("js").getContext("2d");
+var canvasjq=document.getElementById("jq").getContext("2d");
+var canvasbs=document.getElementById("bs").getContext("2d");
+var canvasps=document.getElementById("ps").getContext("2d");
+var canwidth=160;
+var radius=70;
+var canhtml5=function(){
+	var deg = 0;
+    var html5T = function(deg){
+        var r = deg*Math.PI/180;   
+        canvashtml5.clearRect(0,0,canwidth,canwidth);   
+        canvashtml5.beginPath();  
+        canvashtml5.strokeStyle = "#F1652A"; 
+        canvashtml5.lineWidth = 10; 
+        canvashtml5.arc(canwidth/2,canwidth/2,radius,0-1/2*Math.PI,r-1/2*Math.PI,false); //
+        canvashtml5.stroke();
+    };
+    var time = setInterval(function(){
+    	var con=document.getElementsByTagName("section")[2];
+    	if (con.style.display=="block") {
+    		deg+=4;
+	        html5T(deg);
+	        if(deg>324){
+	            clearInterval(time);
+	        }
+	    }    
+    },20);
+}
+var cancss3=function(){
+	var deg = 0;
+    var css3T = function(deg){
+        var r = deg*Math.PI/180;   
+       	canvascss3.clearRect(0,0,canwidth,canwidth);   
+        canvascss3.beginPath();  
+        canvascss3.strokeStyle = "#409AD8"; 
+        canvascss3.lineWidth = 10; 
+       	canvascss3.arc(canwidth/2,canwidth/2,radius,0-1/2*Math.PI,r-1/2*Math.PI,false); //
+        canvascss3.stroke();
+    };
+    var time = setInterval(function(){
+    	var con=document.getElementsByTagName("section")[2];
+    	if (con.style.display=="block") {
+    		deg+=4;
+	        css3T(deg);
+	        if(deg>324){
+	            clearInterval(time);
+	        }
+	    }    
+    },20);
+}
+var canvasTotal=function(){
+
+}
+var canjs=function(){
+	var deg = 0;
+    var jsT = function(deg){
+        var r = deg*Math.PI/180;   
+        canvasjs.clearRect(0,0,canwidth,canwidth);   
+        canvasjs.beginPath();  
+        canvasjs.strokeStyle = "#ECB12C"; 
+        canvasjs.lineWidth = 10; 
+        canvasjs.arc(canwidth/2,canwidth/2,radius,0-1/2*Math.PI,r-1/2*Math.PI,false); //
+        canvasjs.stroke();
+    };
+    var time = setInterval(function(){
+    	var con=document.getElementsByTagName("section")[2];
+    	if (con.style.display=="block") {
+    		deg+=4;
+	        jsT(deg);
+	        if(deg>252){
+	            clearInterval(time);
+	        }
+	    }    
+    },20);
+}
+var canjq=function(){
+	var deg = 0;
+    var jqT = function(deg){
+        var r = deg*Math.PI/180;   
+        canvasjq.clearRect(0,0,canwidth,canwidth);   
+        canvasjq.beginPath();  
+        canvasjq.strokeStyle = "#75B143"; 
+        canvasjq.lineWidth = 10; 
+        canvasjq.arc(canwidth/2,canwidth/2,radius,0-1/2*Math.PI,r-1/2*Math.PI,false); //
+        canvasjq.stroke();
+    };
+    var time = setInterval(function(){
+    	var con=document.getElementsByTagName("section")[2];
+    	if (con.style.display=="block") {
+    		deg+=4;
+	        jqT(deg);
+	        if(deg>288){
+	            clearInterval(time);
+	        }
+	    }    
+    },20);
+}
+var canbs=function(){
+	var deg = 0;
+    var bsT = function(deg){
+        var r = deg*Math.PI/180;   
+        canvasbs.clearRect(0,0,canwidth,canwidth);   
+        canvasbs.beginPath();  
+        canvasbs.strokeStyle = "#583F85"; 
+        canvasbs.lineWidth = 10; 
+        canvasbs.arc(canwidth/2,canwidth/2,radius,0-1/2*Math.PI,r-1/2*Math.PI,false); //
+        canvasbs.stroke();
+    };
+    var time = setInterval(function(){
+    	var con=document.getElementsByTagName("section")[2];
+    	if (con.style.display=="block") {
+    		deg+=4;
+	        bsT(deg);
+	        if(deg>288){
+	            clearInterval(time);
+	        }
+	    }    
+    },20);
+}
+
+var ps=function(){
+	var deg = 0;
+    var psT = function(deg){
+        var r = deg*Math.PI/180;   
+        canvasps.clearRect(0,0,canwidth,canwidth);   
+        canvasps.beginPath();  
+        canvasps.strokeStyle = "#031A3A"; 
+        canvasps.lineWidth = 10; 
+        canvasps.arc(canwidth/2,canwidth/2,radius,0-1/2*Math.PI,r-1/2*Math.PI,false); //
+        canvasps.stroke();
+    };
+    var time = setInterval(function(){
+    	var con=document.getElementsByTagName("section")[2];
+    	if (con.style.display=="block") {
+    		deg+=4;
+	        psT(deg);
+	        if(deg>288){
+	            clearInterval(time);
+	        }
+	    }    
+    },20);
+}
+
+//judge
+
+
+var checkUsername=function(){
+	var username=document.getElementById("username").value;
+	var usernamecheck=document.getElementById("check_username");
+	usernamecheck.innerText="";
+	var myreg=/^[\u4e00-\u9fa5 ]{2,20}$/;
+	var myreg1=/^[a-zA-Z\/ ]{2,20}$/;
+	if(username==""||username==null){
+		usernamecheck.innerText="姓名不能为空";
+	}
+	else{
+		if (myreg.test(username)||myreg1.test(username)) {
+		usernamecheck.innerText="";		
+		}
+		else{
+			usernamecheck.innerText="姓名格式错误";
+		}
+	}
+}
+var checkMail=function(){
+	var usermail=document.getElementById("usermail").value;
+	var usermailcheck=document.getElementById("check_usermail");
+	usermailcheck.innerText="";
+	var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+	if(usermail==""||usermail==null){
+		usermailcheck.innerText="邮箱不能为空";
+	}
+	else{
+		if (myreg.test(usermail)) {
+		usermailcheck.innerText="";		
+		}
+		else{
+			usermailcheck.innerText="邮箱格式错误";
+		}
+	}
+}
+var checkTheme=function(){
+	var usertheme=document.getElementById("usertheme").value;
+	var userthemecheck=document.getElementById("check_usertheme");
+	userthemecheck.innerText="";
+	if(usertheme==""||usertheme==null){
+		userthemecheck.innerText="主题不能为空";
+	}
+}
+
+var checkCon=function(){
+	var usercon=document.getElementById("usercon").value;
+	var userconcheck=document.getElementById("check_usercon");
+	userconcheck.innerText="";
+	if(usercon==""||usercon==null){
+		userconcheck.innerText="内容不能为空";
+	}
+}
+
+var usernameon=document.getElementById("username");
+usernameon.onblur=checkUsername;
+
+var mymailon=document.getElementById("usermail");
+mymailon.onblur=checkMail;
+
+var mythemeon=document.getElementById("usertheme");
+mythemeon.onblur=checkTheme;
+var myconon=document.getElementById("usercon");
+myconon.onblur=checkCon;
+
+
+
+var scrollFunc = function (e) {
+    var con=document.getElementsByTagName("section");
+        var tag=document.getElementsByTagName("aside")[0].children;  
+    
+    var direct = 0;
+    e = e || window.event;
+    if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件   
+          
+        if (e.wheelDelta > 0) { //当滑轮向上滚动时
+            for (var i = 1; i < tag.length; i++) {
+                if(tag[i].className=="cur_a"){
+                    tag[i].className="";
+                    con[i].style.display="none";
+                    tag[i-1].className="cur_a";
+                    con[i-1].style.display="block";
+                    break;
+                }
             }
- /*           else{
-                //停止滚动
-                //obj.style.top = obj.offsetTop - num + 'px';
-                clearInterval(timer);
-            }*/
-        },10);
-    }
-    else if(obj.offsetTop < overHeight){
-        //向上滚动
-        var timer;
-        timer = setInterval(function(){
-           if((overHeight - obj.offsetTop ) <= num && (overHeight - obj.offsetTop) > 0){
-               //最后定位
-               obj.style.top  = overHeight + 'px';
-			    clearInterval(timer);
-           } 
-            else if((overHeight - obj.offsetTop) > num){
-                //继续滚动
-                obj.style.top = obj.offsetTop + num +'px';
+        }
+        if (e.wheelDelta < 0) { //当滑轮向下滚动时
+            
+            for (var i = 0; i < tag.length-1; i++) {
+                var n=0;
+                if(tag[i].className=="cur_a"){
+                    tag[i].className="";
+                    con[i].style.display="none";  
+                    n=i+1;
+                    tag[n].className="cur_a";
+                    con[n].style.display="block";
+                    break;
+                }
             }
-/*            else{
-                //停止滚动
-                clearInterval(timer);
-            }*/
-        },10);
-    }
-}
 
-function btnChange(index,flag,speed){
-    var height = window.innerHeight;
-    var fh = foot.offsetHeight;
-    for(var n=0; n<f_btn.length;n++){
-            f_btn[n].style.background = "transparent";
-    }
-    
-    for(var n=0;n<nav_ul.length;n++){
-        nav_ul[n].style.color = '#000000';
-    }
-
-    if(flag){
-        if(index <= 0 ){
-            indexs = 0;
-            f_btn[0].style.background = "#ffffff"; 
-            //wrapBox.style.top = "0";
-            nav_ul[0].style.color = 'red';
-            divMove(wrapBox,0,20*speed);
         }
-        else if(index >0 && index <=3){
-            f_btn[index].style.background = "#ffffff"; 
-            //wrapBox.style.top = (-height * indexs) +"px";
-            nav_ul[index].style.color = 'red';
-            divMove(wrapBox,-(height * indexs),20*speed);
+    } else if (e.detail) {  //Firefox滑轮事件
+        if (e.detail> 0) { //当滑轮向上滚动时
+            for (var i = 1; i < tag.length; i++) {
+                if(tag[i].className=="cur_a"){
+                    tag[i].className="";
+                    con[i].style.display="none";
+                    tag[i-1].className="cur_a";
+                    con[i-1].style.display="block";
+                    break;
+                }
+            }
         }
-        else if(index == 4){
-            indexs = 4;
-            //wrapBox.style.top = (-height * 3 - fh) +"px";
-            divMove(wrapBox,(-height * 3 - fh),20*speed);
-            nav_ul[index].style.color = 'red';
-        }
-        else{
-            indexs = 4;
+        if (e.detail< 0) { //当滑轮向下滚动时
+            for (var i = 0; i < tag.length-1; i++) {
+                var n=0;
+                if(tag[i].className=="cur_a"){
+                    tag[i].className="";
+                    con[i].style.display="none";  
+                    n=i+1;
+                    tag[n].className="cur_a";
+                    con[n].style.display="block";
+                    break;
+                }
+            }
         }
     }
-    else{
-        if(index <= 0 ){
-            indexs = 0;
-            f_btn[0].style.background = "#ffffff"; 
-            nav_ul[0].style.color = 'red';
-            wrapBox.style.top = "0";
-        }
-        else if(index >0 && index <=3){
-            f_btn[index].style.background = "#ffffff"; 
-            nav_ul[index].style.color = 'red';
-            wrapBox.style.top = (-height * indexs) +"px";
-        }
-        else if(index == 4){
-            indexs = 4;
-            wrapBox.style.top = (-height * 3 - fh) +"px";
-            nav_ul[index].style.color = 'red';
-        }
-        else{
-            indexs = 4;
-        }  
-    }
-    if(indexs == 1 && !box02_flag){
-        box02_flag = true;
-    }
-    if(box02_flag){
-        //第二屏动画
-        var timer = setTimeout(addActive,1000);
-        box02_timer = setInterval(boxTow,500);
-    }
+    // ScrollText(direct);
+}
+// 给页面绑定滑轮滚动事件
+if (document.addEventListener) {
+    document.addEventListener('DOMMouseScroll', scrollFunc, false);
+}
+// //滚动滑轮触发scrollFunc方法
+
+//以下是调用上面的函数
+var browser = myBrowser();
+if ("IE" == browser) {
+    document.onmousewheel = scrollFunc;  
+}else{
+    window.onmousewheel= scrollFunc;  
 }
 
-
-
-
-//浮动点击事件
-for(var i = 0; i < f_btn.length;i++){
-    f_btn[i].indexs = i;
-    f_btn[i].onclick = function(){
-        var speed = Math.abs(indexs - this.indexs);
-        indexs = this.indexs;
-        btnChange(indexs,true,speed);
-    }
-}
-
-//浮动nav事件
-for(var i = 0; i < nav_ul.length;i++){
-    nav_ul[i].indexs = i;
-    nav_ul[i].onclick = function(){
-        var speed = Math.abs(indexs - this.indexs);
-        indexs = this.indexs;
-        btnChange(indexs,true,speed);
-    }
-}
-
-
-//箭头点击事件
-for(var i = 0; i < arrow.length; i++){
-    arrow[i].indexs = i;
-    arrow[i].onclick = function(){
-        indexs = this.indexs + 1;
-        btnChange(indexs,true,1);
-    }
-}
-
-var oB = true;
-
-//鼠标滑动事件
-var scrollFunc=function(e){
-     var direct=0;
-     e=e || window.event;
-     if(e.wheelDelta){   //IE/Opera/Chrome
-         if(oB == true) {
-            //向下滑动
-             if(e.wheelDelta >=120 ){
-                 oB = false;
-                 indexs--;
-                 btnChange(indexs,true,1);
-                 setTimeout(function(){
-                     oB = true;
-                 },700);
-                 
-             }else if(e.wheelDelta <= -120){
-                 oB = false;
-                 //向上滑动
-                 indexs++;
-                 btnChange(indexs,true,1);
-                 setTimeout(function(){
-                     oB=true;
-                 },700);
-             }    
-         }
-         
-     }else if(e.detail){//Firefox         
-         if(oB){
-             if(e.detail >= 3){
-                 oB = false;
-                 indexs++;
-                 btnChange(indexs,true,1);
-                 setTimeout(function(){
-                     oB = true;
-                 },700);
-                 console.log('ss');
-             }
-             else if(e.detail <= -3){
-                 oB = false;
-                 indexs--;
-                 btnChange(indexs,true,1);
-                 setTimeout(function(){oB = true;},700);
-             }
-         }   
-     }
-}
-
-
-
-
-/*注册事件*/
-if(document.addEventListener){
-    document.addEventListener('DOMMouseScroll',scrollFunc,false);//W3C
-}
-window.onmousewheel=document.onmousewheel=scrollFunc;//IE/Opera/Chrome/Safari
-
-
-var iB = true;
-//监听窗口改变
-window.onresize = function(){  
-    document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth/20 + 'px'; 
-    var h = window.innerHeight;
-    var w = window.innerWidth;
-    if(w/h >= 1920/1080){
-        iB = true;
-        imgChange(iB);
-        btnChange(indexs);  
-    
-    }
-    else{
-        iB = false;
-        imgChange(iB);
-        btnChange(indexs,false); 
-    }
-}
-
-function imgChange(iB){
-    var h = window.innerHeight;
-    var w = window.innerWidth;
-    if(iB){
-        for(var i = 0;i < bg.length; i++){
-           bg[i].style.width = w + 'px';
-           bg[i].style.height = w * (1080/1920) + 'px';
-            bg[i].style.top = -(w * (1080/1920) - h)/2 + 'px';
-            boxs[i].style.width = w + 'px';
-            boxs[i].style.height = h + 'px';
-            bg[i].style.left = '0';
-        }
-    }
-    else{
-        for(var i = 0; i < bg.length; i++){
-           bg[i].style.height = h + 'px';
-            bg[i].style.width = h*(1920/1080) + 'px';
-            bg[i].style.left = -(h*(1920/1080) - w)/2 + 'px';
-            boxs[i].style.width = w + 'px';
-            boxs[i].style.height = h + 'px';
-            bg[i].style.top = '0';
-        }
-
-    }
-}
-
-var e_li = document.getElementById('timeUl').children;
-var li_times = 0;
-var left_div = document.getElementById('left_div');
-var right_div = document.getElementById('right_div');
-left_div.onclick = function () {
-    if(li_times == 0){
-        li_times = 0;
-    }
-    else{
-        document.getElementById('timeUl').style.left = document.getElementById('timeUl').offsetLeft + e_li[0].offsetWidth + 'px';
-        li_times--;
-    }
-}
-
-right_div.onclick = function () {
-    if(li_times == (e_li.length-2)){
-        li_times == e_li.length - 2;
-    }
-    else{
-        document.getElementById('timeUl').style.left = document.getElementById('timeUl').offsetLeft - e_li[0].offsetWidth +'px';
-        li_times++;
-    }
-}
-
-//手势事件
-var startY,endY;
-window.addEventListener('touchstart', touchStart,false);
-window.addEventListener('touchmove', touchMove,false);
-window.addEventListener('touchend', touchEnd,false);
-    
-function touchStart(event){
-    // var touch =   event.originalEvent.targetTouches[0];
-    // startY = touch.pageY;
-    startY =   event.touches[0].clientY;
-}
-    
-function touchMove(event){
-    // var touch =  event.originalEvent.changedTouches[0];
-    // endY = touch.pageY;
-    endY=   event.touches[0].clientY;
-}
-
-function touchEnd(event){
-    if(endY - startY > 100){
-        //向上滑动
-        indexs = this.indexs - 1;
-        btnChange(indexs,true,1);
-    }
-    else if(startY -  endY > 100){
-        //向下滑动
-        indexs = this.indexs + 1;
-        btnChange(indexs,true,1);
-    }
-}
+viewHeight();
+tagSwitch();
+canhtml5();
+cancss3();
+canjs();
+canjq();
+canbs();
+ps();
+waited_develop();
