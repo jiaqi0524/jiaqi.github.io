@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<style id="kirki-css-vars">
+:root {
+}
+</style>
+<meta name="keywords" content="{dede:field name='keywords'/}">
+<meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}">
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<style type="text/css">
+img.wp-smiley, img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="contact-form-7-css" href="/skin/css/styles.css" type="text/css" media="all" />
+<link rel="stylesheet" id="normalize-css" href="/skin/css/normalize.css" type="text/css" media="all" />
+<link rel="stylesheet" id="bootstrap-grid-css" href="/skin/css/bootstrap-grid.min.css" type="text/css" media="all" />
+<link rel="stylesheet" id="swiper-css" href="/skin/css/swiper.min.css" type="text/css" media="all" />
+<link rel="stylesheet" id="socicon-css" href="/skin/css/socicon.css" type="text/css" media="all" />
+<link rel="stylesheet" id="unite-gallery-css" href="/skin/css/unite-gallery.css" type="text/css" media="all" />
+<link rel="stylesheet" id="ug-theme-default-css" href="/skin/css/ug-theme-default.css" type="text/css" media="all" />
+<link rel="stylesheet" id="emilynolan-custom-css-css" href="/skin/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" id="kirki-styles-emilynolan_customize-css" href="/skin/css/kirki-styles.css" type="text/css" media="all" />
+<style id="kirki-styles-emilynolan_customize-inline-css" type="text/css">
+.ms-section__block, .ms-footer__inner {
+	max-width: 1230px;
+}
+html, .hamburger-label {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+.slide-inner--info h1 {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 200;
+	font-size: calc(36px + 1vw);
+	line-height: 80px;
+}
+.page-header {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	text-align: left;
+}
+.page-desc-block {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	letter-spacing: .05em;
+	text-align: left;
+}
+.ms-section__block p {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+::selection {
+	color: #ffffff!important;
+	background-color: #555555!important;
+}
+::-moz-selection {
+color:#ffffff !important;
+background-color:#555555!important;
+}
+a, .about__role, .ms-right-sidebar a:hover, .ms-nav-item:active .ms-btn, .ms-nav-item:focus .ms-btn, .ms-nav-item:hover .ms-btn, .ms-button:hover, .nav-next a:hover .post-title, .nav-previous a:hover .post-title, .ms-nav-item:hover .nav-item__btn, .ms-right-sidebar ul a:hover, .sub-menu .ms-nav-item:hover .nav-item__btn {
+	color: #df1f29;
+}
+.ms-btn::before, .ms-post-date, .about__role::after, .ms-btn--slider::before, .ms-button:after, .post-item__link::after, .nav-item__btn::before, .ms-menu-section .nav-item__btn::before {
+	background-color: #df1f29;
+}
+input:focus, textarea:focus {
+	border-color: #df1f29;
+}
+h2.h2 {
+font-size: calc(36px + 16 * (100vw - 992px) / 1508);
+	font-weight: 200;
+}
+.page-desc {
+	max-width: 100vh;
+}
+</style>
+<script type="text/javascript" src="/skin/js/jquery.js"></script>
+<script type="text/javascript" src="/skin/js/jquery-migrate.min.js"></script>
+</head>
+<body class="page-template page-template-page-albums">
+<div class="ms-main-container">
+  <div class="ms-preloader"></div>
+  {dede:include filename="head_dark.htm"/}
+  <div class="content-overlay"></div>
+  <main id="main" class="ms-container">
+    <div class="ms-section__block">
+      <header class="ms-page-title">
+        <h2 class="page-header h2">Contact Us</h2>
+        <div class="page-desc-block"><span class="page-desc">{dede:field.description/}</span></div>
+      </header>
+    </div>
+    <div class="ms-section__block contact-block">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="ms-contact-data col-md-6">
+              <h6 class="h6">地址</h6>
+              <address>
+              {dede:global.cfg_add/}
+              </address>
+            </div>
+            <div class="ms-contact-data col-md-6">
+              <h6 class="h6">热线</h6>
+              <p>{dede:global.cfg_tel/}</p>
+            </div>
+            <div class="ms-contact-data col-md-6">
+              <h6 class="h6">邮箱</h6>
+              <p>{dede:global.cfg_email/}</p>
+            </div>
+            <div class="ms-contact-data col-md-6">
+              <h6 class="h6">QQ</h6>
+              <p>{dede:global.cfg_qq/}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 ms-contact__form-area">
+          <h6 class="h6">Get in touch</h6>
+          <div role="form" class="wpcf7" id="wpcf7-f255-p76-o1" lang="en-US" dir="ltr">
+            <div class="screen-reader-response"></div>
+            <form class="ms-contact-form" action="/plus/diy.php" enctype="multipart/form-data" method="post" onsubmit="return checkForm();">
+              <input type="hidden" name="action" value="post" />
+              <input type="hidden" name="diyid" value="1" />
+              <input type="hidden" name="do" value="2" />
+              <div class="row">
+                <div class="form-group col-md-6"> <span class="wpcf7-form-control-wrap your-name">
+                  <input type="text" name="name" id="name" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" placeholder="姓名" />
+                  </span> </div>
+                <div class="form-group col-md-6"> <span class="wpcf7-form-control-wrap your-email">
+                  <input type="text" name="tel" id="tel" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control"  placeholder="手机" />
+                  </span> </div>
+                <div class="form-group col-md-6"> <span class="wpcf7-form-control-wrap your-email">
+                  <input type="email" name="email" id="email" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control"  placeholder="邮箱" />
+                  </span> </div>
+                <div class="form-group col-md-12"> <span class="wpcf7-form-control-wrap your-message">
+                  <textarea name="content" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control" id="content" placeholder="留言内容"></textarea>
+                  </span> </div>
+                <input type="hidden" name="dede_fields" value="name,text;tel,text;email,text;content,multitext" />
+				<input type="hidden" name="dede_fieldshash" value="410f6dfde6807fe4c4264f225197c57b" />
+                <div class="form-group col-md-12">
+                  <div class="ms-button" data-title="send">Send<br />
+                    <input type="submit" value="send" class="wpcf7-form-control wpcf7-submit" id="tj" />
+                  </div>
+                </div>
+              </div>
+              <div class="wpcf7-response-output wpcf7-display-none"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<!-- Footer --> 
+{dede:include filename="footer.htm"/} 
+<script type="text/javascript" src="/skin/js/imagesloaded.min.js"></script> 
+<script type="text/javascript" src="/skin/js/scripts.js"></script> 
+<script type="text/javascript" src="/skin/js/anime.min.js"></script> 
+<script type="text/javascript" src="/skin/js/swiper.min.js"></script> 
+<script type="text/javascript" src="/skin/js/isotope.pkgd.min.js"></script> 
+<script type="text/javascript" src="/skin/js/jssocials.min.js"></script> 
+<script type="text/javascript" src="/skin/js/unitegallery.min.js"></script> 
+<script type="text/javascript" src="/skin/js/ug-theme-tiles.js"></script> 
+<script type="text/javascript" src="/skin/js/main.js"></script>
+<script type="text/javascript">
+	function checkForm()
+	{
+	  if(document.getElementById('name').value.length == 0)
+	  {
+		alert('您的姓名不能为空！');
+		return false;
+	  }
+	  if(document.getElementById('tel').value.length == 0)
+	  {
+		alert('您的手机不能为空！');
+		return false;
+	  }
+	  
+	  return true;
+	}
+  </script>
+
+</body>
+</html>

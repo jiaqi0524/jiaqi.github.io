@@ -1,0 +1,3 @@
+INSERT INTO `dede_sys_module` VALUES('2','1f35620fb42d452fa2bdc1dee1690f92','文件管理器','','','0','');
+INSERT INTO `dede_sys_module` VALUES('4','b437d85a7a7bc778c9c79b5ec36ab9aa','友情链接','','','0','');
+INSERT INTO `dede_sys_module` VALUES('8','8d34b452d72fd265e6862526c87bf55a','XML地图生成','','','0','<m:top name=\'XML地图\' c=\'1,\' display=\'block\' rank=\'\'>\r\n  <m:item name=\'XML生成\' link=\'/xapp/index.php?m=admin&a=make\' rank=\'\' target=\'main\' />\r\n</m:top>');

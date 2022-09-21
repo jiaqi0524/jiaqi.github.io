@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<style id="kirki-css-vars">
+:root {
+}
+</style>
+<meta name="keywords" content="{dede:field name='keywords'/}">
+<meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}">
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<style type="text/css">
+img.wp-smiley, img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="contact-form-7-css" href="/skin/css/styles.css" type="text/css" media="all" />
+<link rel="stylesheet" id="normalize-css" href="/skin/css/normalize.css" type="text/css" media="all" />
+<link rel="stylesheet" id="bootstrap-grid-css" href="/skin/css/bootstrap-grid.min.css" type="text/css" media="all" />
+<link rel="stylesheet" id="swiper-css" href="/skin/css/swiper.min.css" type="text/css" media="all" />
+<link rel="stylesheet" id="socicon-css" href="/skin/css/socicon.css" type="text/css" media="all" />
+<link rel="stylesheet" id="unite-gallery-css" href="/skin/css/unite-gallery.css" type="text/css" media="all" />
+<link rel="stylesheet" id="ug-theme-default-css" href="/skin/css/ug-theme-default.css" type="text/css" media="all" />
+<link rel="stylesheet" id="emilynolan-custom-css-css" href="/skin/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" id="kirki-styles-emilynolan_customize-css" href="/skin/css/kirki-styles.css" type="text/css" media="all" />
+<style id="kirki-styles-emilynolan_customize-inline-css" type="text/css">
+.ms-section__block, .ms-footer__inner {
+	max-width: 1230px;
+}
+html, .hamburger-label {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+.slide-inner--info h1 {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 200;
+	font-size: calc(36px + 1vw);
+	line-height: 80px;
+}
+.page-header {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	text-align: left;
+}
+.page-desc-block {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	letter-spacing: .05em;
+	text-align: left;
+}
+.ms-section__block p {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+::selection {
+	color: #ffffff!important;
+	background-color: #555555!important;
+}
+::-moz-selection {
+color:#ffffff !important;
+background-color:#555555!important;
+}
+a, .about__role, .ms-right-sidebar a:hover, .ms-nav-item:active .ms-btn, .ms-nav-item:focus .ms-btn, .ms-nav-item:hover .ms-btn, .ms-button:hover, .nav-next a:hover .post-title, .nav-previous a:hover .post-title, .ms-nav-item:hover .nav-item__btn, .ms-right-sidebar ul a:hover, .sub-menu .ms-nav-item:hover .nav-item__btn {
+	color: #df1f29;
+}
+.ms-btn::before, .ms-post-date, .about__role::after, .ms-btn--slider::before, .ms-button:after, .post-item__link::after, .nav-item__btn::before, .ms-menu-section .nav-item__btn::before {
+	background-color: #df1f29;
+}
+input:focus, textarea:focus {
+	border-color: #df1f29;
+}
+h2.h2 {
+font-size: calc(36px + 16 * (100vw - 992px) / 1508);
+	font-weight: 200;
+}
+.page-desc {
+	max-width: 100vh;
+	font-size: 16px !important;
+}
+#pages .active {
+	background-color: #000;
+	color: #fff;
+}
+#pages a {
+	line-height: 30px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+</style>
+<script type="text/javascript" src="/skin/js/jquery.js"></script>
+<script type="text/javascript" src="/skin/js/jquery-migrate.min.js"></script>
+</head>
+<body class="page-template page-template-page-albums">
+<div class="ms-main-container">
+  <div class="ms-preloader"></div>
+  {dede:include filename="head_dark.htm"/}
+  <div class="content-overlay"></div>
+  <main id="main" class="ms-container">
+    <div class="ms-section__block">
+      <header class="ms-page-title">
+        <h2 class="page-header h2">{dede:field.typename/}</h2>
+        <div class="page-desc-block"> <span class="page-desc">{dede:field.description/}</span> </div>
+      </header>
+    </div>
+    <div class="ms-section__block">
+      <div class="ms-ajax-content row">
+        <div class="grid-sizer"></div>
+        {dede:list pagesize ='12'}
+        <div class="album-item ms-grid-item col-lg-4 col-md-6 albums type-albums status-publish hentry albums_categories-creative"> <a href="[field:arcurl/]" data-type="page-transition">
+          <div class="album-item__overlay"> <span class="album-item__cover"></span>
+            <h5 class="h5">[field:title/]</h5>
+          </div>
+          <div class="album-item__img" style="background-image: url([field:picname/])"></div>
+          </a> </div>
+        {/dede:list} </div>
+      <div class="col-lg-12 ms-pagination">
+        <div class="pagess">
+        <ul>
+         {dede:pagelist listitem="index,end,pre,next,pageno" listsize="1"/}
+        </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<!-- Footer --> 
+{dede:include filename="footer.htm"/} 
+<script type="text/javascript" src="/skin/js/imagesloaded.min.js"></script> 
+<script type="text/javascript" src="/skin/js/scripts.js"></script> 
+<script type="text/javascript" src="/skin/js/anime.min.js"></script> 
+<script type="text/javascript" src="/skin/js/swiper.min.js"></script> 
+<script type="text/javascript" src="/skin/js/isotope.pkgd.min.js"></script> 
+<script type="text/javascript" src="/skin/js/jssocials.min.js"></script> 
+<script type="text/javascript" src="/skin/js/unitegallery.min.js"></script> 
+<script type="text/javascript" src="/skin/js/ug-theme-tiles.js"></script> 
+<script type="text/javascript" src="/skin/js/main.js"></script>
+</body>
+</html>

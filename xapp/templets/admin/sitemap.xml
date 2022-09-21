@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>{dede:global.cfg_basehost/}</loc>
+      <lastmod>{dede:field name='shownowtime' runphp='yes'}@me=date("Y-m-d");{/dede:field}</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>1.0</priority>
+   </url>
+{dede:channel  type='top'}
+<url>
+
+<loc>[field:typedir runphp='yes']if(strpos(@me,"{cmspath}") !== false){@me=str_replace('{cmspath}',$GLOBALS['cfg_basehost'],@me);}[/field:typedir]</loc>
+
+<changefreq>daily</changefreq>
+
+<priority>0.8</priority>
+
+</url>
+{/dede:channel}
+
+   {dede:arclist row='50000' orderby=pubdate}
+   <url>
+      <loc>[field:aid runphp='yes']if($GLOBALS['cfg_multi_site']=='N'){@me=$GLOBALS['cfg_basehost'];}[/field:aid][field:arcurl /]</loc>
+   <lastmod>[field:stime /]</lastmod>
+   </url>
+   {/dede:arclist} 
+</urlset>

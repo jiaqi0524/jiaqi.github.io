@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<style id="kirki-css-vars">
+:root {}
+</style>
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:global.cfg_description/}">
+<meta name="author" content="order by M170 www.lanrenzhijia.com">
+<title>{dede:global.cfg_webname/}</title>
+<style type="text/css">
+img.wp-smiley, img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="contact-form-7-css" href="/skin/css/styles.css" type="text/css" media="all" />
+<link rel="stylesheet" id="normalize-css" href="/skin/css/normalize.css" type="text/css" media="all" />
+<link rel="stylesheet" id="bootstrap-grid-css" href="/skin/css/bootstrap-grid.min.css" type="text/css" media="all" />
+<link rel="stylesheet" id="swiper-css" href="/skin/css/swiper.min.css" type="text/css" media="all" />
+<link rel="stylesheet" id="socicon-css" href="/skin/css/socicon.css" type="text/css" media="all" />
+<link rel="stylesheet" id="unite-gallery-css" href="/skin/css/unite-gallery.css" type="text/css" media="all" />
+<link rel="stylesheet" id="ug-theme-default-css" href="/skin/css/ug-theme-default.css" type="text/css" media="all" />
+<link rel="stylesheet" id="emilynolan-custom-css-css" href="/skin/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" id="kirki-styles-emilynolan_customize-css" href="/skin/css/kirki-styles.css" type="text/css" media="all" />
+<style id="kirki-styles-emilynolan_customize-inline-css" type="text/css">
+.ms-section__block, .ms-footer__inner {
+	max-width: 1230px;
+}
+html, .hamburger-label {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+.slide-inner--info h1 {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 200;
+	font-size: calc(24px + 1vw);
+}
+.page-header {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	text-align: left;
+}
+.page-desc-block {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	letter-spacing: .05em;
+	text-align: left;
+}
+.ms-section__block p {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+::selection {
+	color: #ffffff!important;
+	background-color: #555555!important;
+}
+::-moz-selection {
+color:#ffffff !important;
+background-color:#555555!important;
+}
+a, .about__role, .ms-right-sidebar a:hover, .ms-nav-item:active .ms-btn, .ms-nav-item:focus .ms-btn, .ms-nav-item:hover .ms-btn, .ms-button:hover, .nav-next a:hover .post-title, .nav-previous a:hover .post-title, .ms-nav-item:hover .nav-item__btn, .ms-right-sidebar ul a:hover, .sub-menu .ms-nav-item:hover .nav-item__btn {
+	color: #df1f29;
+}
+.ms-btn::before, .ms-post-date, .about__role::after, .ms-btn--slider::before, .ms-button:after, .post-item__link::after, .nav-item__btn::before, .ms-menu-section .nav-item__btn::before {
+	background-color: #df1f29;
+}
+input:focus, textarea:focus {
+	border-color: #df1f29;
+}
+</style>
+<script type="text/javascript" src="/skin/js/jquery.js"></script>
+<script type="text/javascript" src="/skin/js/jquery-migrate.min.js"></script>
+</head>
+<body class="home page-template page-template-page-full-slider transition-effect">
+<div class="ms-main-container">
+  <div class="ms-preloader"></div>
+  {dede:include filename="head.htm"/}
+  <div class="content-overlay"></div>
+  <main id="main" class="ms-container">
+    <div class="swiper-container">
+      <div class="swiper-wrapper" data-direction="vertical" data-autoplay="true" data-loop="false"> 
+       {dede:arclist typeid='8'  row='6'  addfields='lj,ms' channelid='14' }
+        <div class="swiper-slide" data-swiper-autoplay="5000">
+          <div class="slide-inner" data-swiper-parallax="45%">
+            <div class="overlay"></div>
+            <div class="slide-inner--image" style="background-image: url('[field:picname/]');"></div>
+            <div class="slide-inner--info">
+              <h1 class="h1" data-swiper-parallax="-400px">[field:title/]</h1>
+              <h3 style="color: #fff;line-height: 1.6em;font-size: 24px;font-weight: 200;">[field:ms/]</h3>
+              <a href="[field:lj/]" data-type="page-transition" class="ms-btn--slider">Take a Look</a> </div>
+          </div>
+        </div>
+        {/dede:arclist} </div>
+      <div class="swiper-nav-btn">
+        <div class="swiper-button-prev swiper-button-white"> prev </div>
+        <div class="swiper-button-next swiper-button-white"> next </div>
+      </div>
+      <div class="expanded-timeline">
+        <div class="expanded-timeline__counter">
+          <div class="expanded-timeline__number">
+            <div class="swiper-counter"></div>
+          </div>
+          <div class="expanded-timeline__total"> {dede:type typeid='8'}<span>[field:ID function='GetTotalArc(@me)'/]</span>{/dede:type} </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="scroll-message"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16.5 15.98" class="scroll-svg">
+          <title>Asset 1</title>
+          <g>
+            <g data-name="Layer 1">
+              <polygon fill="#fff" points="0 4.64 0.71 5.34 3.85 2.2 3.85 15.98 4.85 15.98 4.85 2.2 8 5.34 8.71 4.64 4.35 0.29 0 4.64"></polygon>
+              <polygon fill="#fff" points="11.65 0 11.65 13.79 8.5 10.64 7.79 11.35 12.15 15.7 16.5 11.35 15.79 10.64 12.65 13.79 12.65 0 11.65 0"></polygon>
+            </g>
+          </g>
+          </svg>滚轮 </div>
+      </div>
+      <div class="edit-full-slider"> </div>
+    </div>
+  </main>
+</div>
+<script type="text/javascript" src="/skin/js/imagesloaded.min.js"></script> 
+<script type="text/javascript" src="/skin/js/scripts.js"></script> 
+<script type="text/javascript" src="/skin/js/anime.min.js"></script> 
+<script type="text/javascript" src="/skin/js/swiper.min.js"></script> 
+<script type="text/javascript" src="/skin/js/isotope.pkgd.min.js"></script> 
+<script type="text/javascript" src="/skin/js/jssocials.min.js"></script> 
+<script type="text/javascript" src="/skin/js/unitegallery.min.js"></script> 
+<script type="text/javascript" src="/skin/js/ug-theme-tiles.js"></script> 
+<script type="text/javascript" src="/skin/js/main.js"></script>
+</body>
+</html>

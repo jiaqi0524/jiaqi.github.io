@@ -1,0 +1,41 @@
+<?php
+$z[0]=Array("field","",330,352);
+$z[0][4]=array();
+$z[0][4]['name']="keywords";
+$z[1]=Array("field","",390,442);
+$z[1][4]=array();
+$z[1][4]['name']="description";
+$z[1][4]['function']="html2text(@me)";
+$z[2]=Array("field","",453,472);
+$z[2][4]=array();
+$z[2][4]['name']="title";
+$z[3]=Array("global","",473,499);
+$z[3][4]=array();
+$z[3][4]['name']="cfg_webname";
+$z[4]=Array("include","",4038,4078);
+$z[4][4]=array();
+$z[4][4]['filename']="head_dark.htm";
+$z[5]=Array("field","",4270,4289);
+$z[5][4]=array();
+$z[5][4]['name']="title";
+$z[6]=Array("field","",4358,4383);
+$z[6][4]=array();
+$z[6][4]['name']="description";
+$z[7]=Array("productimagelist"," <img alt=\"[field:text/]\" src=\"[field:imgsrc/]\" data-image=\"[field:imgsrc/]\" data-description=\"\" /> ",4490,4637);
+$z[7][4]=array();
+$z[8]=Array("prenext","   \r\npreg_match_all('/<a.*?(?: |\\\\t|\\\\r|\\\\n)?href=[\\'\"]?(.+?)[\\'\"]?(?:(?: |\\\\t|\\\\r|\\\\n)+.*?)?>(.+?)<\\/a.*?>/sim', @me, \$strResult, PREG_PATTERN_ORDER);   \r\n              @me=\$strResult[1][0];   \r\n              ",4957,5220);
+$z[8][4]=array();
+$z[8][4]['get']="next";
+$z[8][4]['runphp']="yes";
+$z[9]=Array("prenext","   \r\npreg_match_all('/<a.*?(?: |\\\\t|\\\\r|\\\\n)?href=[\\'\"]?(.+?)[\\'\"]?(?:(?: |\\\\t|\\\\r|\\\\n)+.*?)?>(.+?)<\\/a.*?>/sim', @me, \$strResult, PREG_PATTERN_ORDER);   \r\n              @me=\$strResult[1][0];   \r\n              ",5402,5664);
+$z[9][4]=array();
+$z[9][4]['get']="pro";
+$z[9][4]['runphp']="yes";
+$z[10]=Array("type","[field:typelink/]",5850,5909);
+$z[10][4]=array();
+$z[10][4]['typeid']="0′ row=1";
+$z[11]=Array("include","",6045,6082);
+$z[11][4]=array();
+$z[11][4]['filename']="footer.htm";
+
+?>

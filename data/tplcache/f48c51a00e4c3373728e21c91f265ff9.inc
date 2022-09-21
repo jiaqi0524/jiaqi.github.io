@@ -1,0 +1,1 @@
+ <a href="[field:link/]" class="tag-cloud-link" style="font-size: 16.4pt;" aria-label="alone (2 items)">[field:tag /]</a> 

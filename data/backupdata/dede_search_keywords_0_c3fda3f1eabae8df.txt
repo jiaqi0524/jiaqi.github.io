@@ -1,0 +1,1 @@
+INSERT INTO `dede_search_keywords` VALUES('1','情深','情深','1','1','1583810518','0','0');

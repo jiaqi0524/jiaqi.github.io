@@ -1,0 +1,1 @@
+<li class="col-lg-2 col-md-2 col-sm-4 col-xs-4 col-4"><img src="[field:picname/]" alt="[field:title/]" /></li>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<style id="kirki-css-vars">
+:root {
+}
+</style>
+<meta name="keywords" content="{dede:field.keywords/}">
+<meta name="description" content="{dede:field.description  function='html2text(@me)'/}">
+<meta name="author" content="百度云">
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<style type="text/css">
+img.wp-smiley, img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="contact-form-7-css" href="/skin/css/styles.css" type="text/css" media="all" />
+<link rel="stylesheet" id="normalize-css" href="/skin/css/normalize.css" type="text/css" media="all" />
+<link rel="stylesheet" id="bootstrap-grid-css" href="/skin/css/bootstrap-grid.min.css" type="text/css" media="all" />
+<link rel="stylesheet" id="swiper-css" href="/skin/css/swiper.min.css" type="text/css" media="all" />
+<link rel="stylesheet" id="socicon-css" href="/skin/css/socicon.css" type="text/css" media="all" />
+<link rel="stylesheet" id="unite-gallery-css" href="/skin/css/unite-gallery.css" type="text/css" media="all" />
+<link rel="stylesheet" id="ug-theme-default-css" href="/skin/css/ug-theme-default.css" type="text/css" media="all" />
+<link rel="stylesheet" id="emilynolan-custom-css-css" href="/skin/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" id="kirki-styles-emilynolan_customize-css" href="/skin/css/kirki-styles.css" type="text/css" media="all" />
+<style id="kirki-styles-emilynolan_customize-inline-css" type="text/css">
+.ms-section__block, .ms-footer__inner {
+	max-width: 1230px;
+}
+html, .hamburger-label {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+.slide-inner--info h1 {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 200;
+	font-size: calc(36px + 1vw);
+	line-height: 80px;
+}
+.page-header {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	text-align: left;
+}
+.page-desc-block {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: 300;
+	letter-spacing: .05em;
+	text-align: left;
+}
+.ms-section__block p {
+	font-family: Yantramanav, Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+::selection {
+	color: #ffffff!important;
+	background-color: #555555!important;
+}
+::-moz-selection {
+color:#ffffff !important;
+background-color:#555555!important;
+}
+a, .about__role, .ms-right-sidebar a:hover, .ms-nav-item:active .ms-btn, .ms-nav-item:focus .ms-btn, .ms-nav-item:hover .ms-btn, .ms-button:hover, .nav-next a:hover .post-title, .nav-previous a:hover .post-title, .ms-nav-item:hover .nav-item__btn, .ms-right-sidebar ul a:hover, .sub-menu .ms-nav-item:hover .nav-item__btn {
+	color: #df1f29;
+}
+.ms-btn::before, .ms-post-date, .about__role::after, .ms-btn--slider::before, .ms-button:after, .post-item__link::after, .nav-item__btn::before, .ms-menu-section .nav-item__btn::before {
+	background-color: #df1f29;
+}
+input:focus, textarea:focus {
+	border-color: #df1f29;
+}
+h2.h2 {
+font-size: calc(36px + 16 * (100vw - 992px) / 1508);
+	font-weight: 200;
+}
+.page-desc {
+	max-width: 100vh;
+	font-size: 16px !important;
+}
+#pages .active {
+	background-color: #000;
+	color: #fff;
+}
+#pages a {
+	line-height: 30px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+</style>
+<script type="text/javascript" src="/skin/js/jquery.js"></script>
+<script type="text/javascript" src="/skin/js/jquery-migrate.min.js"></script>
+</head>
+<body class="page-template page-template-page-albums">
+<div class="ms-main-container">
+  <div class="ms-preloader"></div>
+  {dede:include filename="head_dark.htm"/}
+  <div class="content-overlay"></div>
+  <main id="main" class="ms-container">
+    <div class="ms-section__block">
+      <div class="row">
+        <div class="single-post__content col-lg-9 col-xs-12">
+          <div class="ms-blogpage-image">
+            <div class="ms-post__image" style="background-image: url({dede:field.picname/})"></div>
+          </div>
+          <header class="ms-post__header">
+            <h2 class="post-title" style="font-size: 1.6em;">{dede:field.title/}</h2>
+          </header>
+          <article id="post-320" class="post-320 post type-post status-publish format-standard has-post-thumbnail hentry category-inspiration tag-power tag-sport">
+            <p style="font-size: calc(16px + 2 * (100vw - 992px) / 1508);">{dede:field.body/}</p>
+            <div class="ms-single-post__nav">
+              <nav class="navigation post-navigation" role="navigation">
+                <h2 class="screen-reader-text">Post navigation</h2>
+                <div class="nav-links">
+                  <div class="nav-previous"> <a href="{dede:prenext get='next' runphp='yes'}   
+preg_match_all('/<a.*?(?: |\\t|\\r|\\n)?href=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>(.+?)<\/a.*?>/sim', @me, $strResult, PREG_PATTERN_ORDER);   
+                    @me=$strResult[1][0];   
+                    {/dede:prenext}" rel="prev"><span class="meta-nav" aria-hidden="true">Prev</span> <span class="screen-reader-text">prev postPrevious page</span> <span class="post-title"></span></a> </div>
+                  <div class="nav-next"> <a href="{dede:prenext get='pro' runphp="yes"}   
+preg_match_all('/<a.*?(?: |\\t|\\r|\\n)?href=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>(.+?)<\/a.*?>/sim', @me, $strResult, PREG_PATTERN_ORDER);   
+                    @me=$strResult[1][0];   
+                    {/dede:prenext}" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="post-title"></span><span class="screen-reader-text">next postNext page</span> </a> </div>
+                </div>
+              </nav>
+            </div>
+            <!--<div class="ms-post__share">
+              <h6 class="share-title h6">Share</h6>
+              <ul id="share" class="socials share-links">
+              </ul>
+            </div>--> 
+          </article>
+        </div>
+        <div class="ms-right-sidebar col-lg-3 col-xs-12">
+          <aside id="search-2" class="widget_search">
+            <form role="search" method="get" id="searchform" class="searchform" action="/plus/search.php">
+              <div class="ms-search-widget col-md-12">
+                <input type="search" placeholder="Search..." value="" name="q" id="s" class="search-field" />
+                <input type="submit" id="searchsubmit" class="search-submit" value="Search" />
+              </div>
+            </form>
+          </aside>
+          <aside id="recent-posts-3" class="widget_recent_entries">
+            <div class="col-md-12">
+              <h5>热门新闻</h5>
+            </div>
+            <ul>
+              {dede:arclist  typeid='5' row='6'}
+              <li> <a href="[field:arcurl/]">[field:title/]</a> <span class="post-date">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span> </li>
+              {/dede:arclist}
+            </ul>
+          </aside>
+          <aside id="categories-2" class="widget_categories">
+            <div class="col-md-12">
+              <h5>最新作品</h5>
+            </div>
+            <ul>
+              {dede:arclist  typeid='1' row='6'}
+              <li class="cat-item"><a href="[field:arcurl/]">[field:title/]</a> </li>
+              {/dede:arclist}
+            </ul>
+          </aside>
+          <aside id="tag_cloud-1" class="widget_tag_cloud">
+            <div class="col-md-12">
+              <h5>标签/Tags</h5>
+            </div>
+            <div class="tagcloud"> {dede:tag row='50' sort='new' getall='1'} <a href="[field:link/]" class="tag-cloud-link" style="font-size: 16.4pt;" aria-label="alone (2 items)">[field:tag /]</a> {/dede:tag} </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<!-- Footer --> 
+{dede:include filename="footer.htm"/} 
+<script type="text/javascript" src="/skin/js/imagesloaded.min.js"></script> 
+<script type="text/javascript" src="/skin/js/scripts.js"></script> 
+<script type="text/javascript" src="/skin/js/anime.min.js"></script> 
+<script type="text/javascript" src="/skin/js/swiper.min.js"></script> 
+<script type="text/javascript" src="/skin/js/isotope.pkgd.min.js"></script> 
+<script type="text/javascript" src="/skin/js/jssocials.min.js"></script> 
+<script type="text/javascript" src="/skin/js/unitegallery.min.js"></script> 
+<script type="text/javascript" src="/skin/js/ug-theme-tiles.js"></script> 
+<script type="text/javascript" src="/skin/js/main.js"></script>
+</body>
+</html>
