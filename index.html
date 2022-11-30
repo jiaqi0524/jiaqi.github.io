@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html lang="cn">
-
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -9,7 +8,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>嘉祺宝贝成长记  | 主页</title>
+    <title>嘉祺宝贝成长记</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -20,43 +19,39 @@
 
     <!-- Responsive CSS -->
     <link href="css/responsive.css" rel="stylesheet">
-
+    <style>
+        .jz{          
+            height: 50px;
+            text-align: center;
+            background-color: black;
+            line-height: 50px;
+        }
+    </style>
+        <!-- jQuery (Necessary for All JavaScript Plugins) -->
+        <script src="js/jquery/jquery-2.2.4.min.js"></script>
+        <!-- Popper js -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap js -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Plugins js -->
+        <script src="js/plugins.js"></script>
+        <!-- Active js -->
+        <script src="js/active.js"></script>
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="showbox">
-            <div class="loader">
-                <svg class="circular" viewBox="25 25 50 50">
-                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-                </svg>
-            </div>
-        </div>
-        <div class="questions-area text-center">
-            <p>你喜欢我吗?</p>
-            <ul>
-                <li> </li>
-                <li> </li>
-                <li> </li>
-                <li> </li>
-                <li> </li>
-            </ul>
-        </div>
-    </div>
-
     <!-- Gradient Background Overlay -->
     <div class="gradient-background-overlay"></div>
 
     <!-- Header Area Start -->
-    <header class="header-area">
+    <header class="header-area bg-img" style="background-image: url(img/bg-img/14.jpg);">
         <div class="container-fluid h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12 h-100">
                     <div class="main-menu h-100">
                         <nav class="navbar h-100 navbar-expand-lg">
                             <!-- Logo Area  -->
-                            <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt="Logo"></a>
+                            <a class="navbar-brand" href="index1.html"><img src="img/core-img/logo.png" alt="Logo"></a>
 
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#studioMenu" aria-controls="studioMenu" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i> 菜单</button>
 
@@ -64,17 +59,16 @@
                                 <!-- Menu Area Start  -->
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="index.html">主页 <span class="sr-only">(current)</span></a>
+                                        <a class="nav-link" href="index1.html">主页 <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">页面</a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="index.html">首页</a>
+                                            <a class="dropdown-item" href="index1.html">主页</a>
                                             <a class="dropdown-item" href="about-me.html">关于</a>
                                             <a class="dropdown-item" href="portfolio.html">影集</a>
                                             <a class="dropdown-item" href="blog.html">心语</a>
                                             <a class="dropdown-item" href="#">联系</a>
-                                            <a class="dropdown-item" href="#">基础</a>
                                         </div>
                                     </li>
                                     <li class="nav-item">
@@ -87,20 +81,9 @@
                                         <a class="nav-link" href="blog.html">心语</a>
                                     </li>
                                     <li class="nav-item">
-                                <a class="nav-link" href="#">联系</a>
+                                        <a class="nav-link" href="#">联系</a>
                                     </li>
                                 </ul>
-                                <!-- Search Form -->
-                                <div class="header-search-form ml-auto">
-                                    <form action="#">
-                                        <input type="search" class="form-control" placeholder="Input your keyword then press enter..." id="search" name="search">
-                                        <input class="d-none" type="submit" value="submit">
-                                    </form>
-                                </div>
-                                <!-- Search btn -->
-                                <div id="searchbtn">
-                                    <img src="img/core-img/search.png" alt="">
-                                </div>
                             </div>
                         </nav>
                     </div>
@@ -108,121 +91,20 @@
             </div>
         </div>
     </header>
-    <!-- Header Area End -->
+<br><br><br><br><br><br><br><br><br>
 
-    <!-- Social Sidebar Area Start -->
-   
-    <!-- Social Sidebar Area End -->
-    
-    <!-- ***** Welcome Area Start ***** -->
-    <section class="welcome-area">
-        <div class="carousel h-100 slide" data-ride="carousel" id="welcomeSlider">
-            <!-- Carousel Inner -->
-            <div class="carousel-inner h-100">
-
-                <div class="carousel-item h-100 bg-img active" style="background-image: url(img/bg-img/1.jpg);">
-                    <div class="carousel-content h-100">
-                       
-                    </div>
-                </div>
-
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/2.jpg);">
-                    <div class="carousel-content h-100">
-                       
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/3.jpg);">
-                    <div class="carousel-content h-100">
-                       
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/4.jpg);">
-                    <div class="carousel-content h-100">
-                       
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/5.jpg);">
-                    <div class="carousel-content h-100">
-                     
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/6.jpg);">
-                    <div class="carousel-content h-100">
-                      
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/7.jpg);">
-                    <div class="carousel-content h-100">
-                      
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/8.jpg);">
-                    <div class="carousel-content h-100">
-                       
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/9.jpg);">
-                    <div class="carousel-content h-100">
-                      
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/10.jpg);">
-                    <div class="carousel-content h-100">
-                      
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/11.jpg);">
-                    <div class="carousel-content h-100">
-                      
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/12.jpg);">
-                    <div class="carousel-content h-100">
-                       
-                    </div>
-                </div>
-                <div class="carousel-item h-100 bg-img" style="background-image: url(img/bg-img/13.jpg);">
-                    <div class="carousel-content h-100">
-                      
-                    </div>
-                </div>
-            </div>
-            <!-- Carousel Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#welcomeSlider" data-slide-to="0" class="active bg-img" style="background-image: url(img/bg-img/1.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="1" class="bg-img" style="background-image: url(img/bg-img/2.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="2" class="bg-img" style="background-image: url(img/bg-img/3.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="3" class="bg-img" style="background-image: url(img/bg-img/4.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="4" class="bg-img" style="background-image: url(img/bg-img/5.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="5" class="bg-img" style="background-image: url(img/bg-img/6.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="6" class="bg-img" style="background-image: url(img/bg-img/7.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="7" class="bg-img" style="background-image: url(img/bg-img/8.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="8" class="bg-img" style="background-image: url(img/bg-img/9.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="9" class="bg-img" style="background-image: url(img/bg-img/10.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="10" class="bg-img" style="background-image: url(img/bg-img/11.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="11" class="bg-img" style="background-image: url(img/bg-img/12.jpg);"></li>
-                <li data-target="#welcomeSlider" data-slide-to="12" class="bg-img" style="background-image: url(img/bg-img/13.jpg);"></li>
-            </ol>
-        </div>
-    </section>
-    <!-- ***** Welcome Area End ***** -->
-
-
-    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-    <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Plugins js -->
-    <script src="js/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
+<p style="text-align:center">天公作美,荫佑在下</p>
+<p style="text-align:center">天降麟儿,弄璋之喜</p>
+<p style="text-align:center">小儿无赖,就爱使坏</p>
+<p style="text-align:center">想要你亲,想要你抱</p>
+<p style="text-align:center">略备薄酒,聊表谢意</p>
+<p style="text-align:center">欢迎光临,不胜荣幸</p>
+<p style="text-align:center"></p>
+<p style="text-align:center"><a href="index1.html",style="text-decoration:none">点击这里，看我小崽</a></p>
+<br><br><br><br><br><br>
+    <footer class="jz">   
+        <a href="https://beian.miit.gov.cn" target="_blank" style="color: white;">赣ICP备2022008720号-1</a>
+    </footer>
 
 </body>
-
 </html>

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="cn">
 
 <head>
     <meta charset="UTF-8">
@@ -56,7 +56,7 @@
                     <div class="main-menu h-100">
                         <nav class="navbar h-100 navbar-expand-lg">
                             <!-- Logo Area  -->
-                            <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt="Logo"></a>
+                            <a class="navbar-brand" href="index1.html"><img src="img/core-img/logo.png" alt="Logo"></a>
 
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#studioMenu" aria-controls="studioMenu" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i> 菜单</button>
 
@@ -64,24 +64,23 @@
                                 <!-- Menu Area Start  -->
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="index.html">主页 <span class="sr-only">(current)</span></a>
+                                        <a class="nav-link" href="index1.html">主页 <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">页面</a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="index.html">主页</a>
+                                            <a class="dropdown-item" href="index1.html">主页</a>
                                             <a class="dropdown-item" href="about-me.html">关于</a>
-                                            <a class="dropdown-item" href="portfolio.html">影集</a>
+                                            <a class="dropdown-item" href="#">影集</a>
                                             <a class="dropdown-item" href="blog.html">心语</a>
                                             <a class="dropdown-item" href="#">联系</a>
-                                            <a class="dropdown-item" href="#">基础</a>
                                         </div>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="about-me.html">关于</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="portfolio.html">影集</a>
+                                        <a class="nav-link" href="#">影集</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="blog.html">心语</a>
@@ -90,17 +89,6 @@
                                         <a class="nav-link" href="#">联系</a>
                                     </li>
                                 </ul>
-                                <!-- Search Form -->
-                                <div class="header-search-form ml-auto">
-                                    <form action="#">
-                                        <input type="search" class="form-control" placeholder="输入关键字后回车" id="search" name="search">
-                                        <input class="d-none" type="submit" value="submit">
-                                    </form>
-                                </div>
-                                <!-- Search btn -->
-                                <div id="searchbtn">
-                                    <img src="img/core-img/search.png" alt="">
-                                </div>
                             </div>
                         </nav>
                     </div>
@@ -110,9 +98,6 @@
     </header>
     <!-- Header Area End -->
 
-    <!-- Social Sidebar Area Start -->
-    <div class="social-sidebar-area">
-       
 
     <!-- Project Area Start -->
     <div class="gallery_area clearfix">
@@ -120,150 +105,178 @@
             <div class="gallery_menu">
                 <div class="portfolio-menu">
                     <button class="active btn" type="button" data-filter="*">全部</button>
-                    <button class="btn" type="button" data-filter=".portraits">肖像</button>
-                    <button class="btn" type="button" data-filter=".weddings">百日</button>
-                    <button class="btn" type="button" data-filter=".studio">日常</button>
-                    <button class="btn" type="button" data-filter=".fashion">搞怪</button>
-                    <button class="btn" type="button" data-filter=".life">趣事</button>
+                    <a href="#"><button class="btn" type="button" data-filter=".portraits">肖像</button></a>
+                    <a href="baitian/index.html"><button class="btn" type="button">百日</button></a>
+                    <a href="#"><button class="btn" type="button" data-filter=".studio">日常</button></a>
+                    <a href="#"><button class="btn" type="button" data-filter=".fashion">搞怪</button></a>
+                    <a href="#"><button class="btn" type="button" data-filter=".life">趣事</button></a>
                 </div>
+                <hr size="1">
             </div>
-
-            <div class="row portfolio-column">
-
                 <!-- Single Item -->
-                 <div class="col-12 col-xs-2 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item weddings">
-                    <img src="img/bg-img/p1.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/bg-img/p1.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-xs-2 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item weddings">
-                    <img src="img/bg-img/p2.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/bg-img/p2.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-xs-2 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item portraits">
-                    <img src="img/bg-img/p3.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/bg-img/p3.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-xs-2 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item weddings life">
-                    <img src="img/bg-img/p4.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/bg-img/p4.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-xs-2 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item weddings">
-                    <img src="img/bg-img/p5.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/bg-img/p5.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-xs-2 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item portraits">
-                    <img src="img/bg-img/p6.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/bg-img/p6.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-xs-2 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item studio">
-                    <img src="img/bg-img/p7.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/bg-img/p7.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-xs-2 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item studio life">
-                    <img src="img/bg-img/p8.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/bg-img/p8.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-xs-2 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item fashion">
-                    <img src="img/bg-img/p9.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/bg-img/p9.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-xs-2 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item portraits">
-                    <img src="img/bg-img/p10.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/bg-img/p10.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-xs-2 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item studio life">
-                    <img src="img/bg-img/p11.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/bg-img/p11.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Item -->
-                <div class="col-12 col-xs-2 col-sm-6 col-md-4 col-lg-3 column_single_gallery_item fashion">
-                    <img src="img/bg-img/p12.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/bg-img/p12.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                 <!-- Single Item -->
-                     <div class="col-12 col-xs-2 col-sm-6 col-md-4 col-lg-2 column_single_gallery_item fashion">
-                    <img src="img/bg-img/p13.jpg" alt="">
-                    <div class="hover_overlay">
-                        <a class="gallery_img" href="img/bg-img/p13.jpg"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-                <!-- Single Item -->
-            </div>
-
-            <div class="row">
-                <div class="col-12 text-center mt-70">
-                    <a href="#" class="btn studio-btn"><img src="img/core-img/logo-icon.png" alt=""> 更多...</a>
-                </div>
-            </div>
         </div>
-    </div>
+
+
     <!-- Project Area End -->
 
+<a href="baitian/target0.html"><img align="center" src="baitian/thumbnails/765765756.jpg" width="105" height="154" title="765765756.jpg" border="0"></a>
+<a href="baitian/target1.html"><img align="center" src="baitian/thumbnails/1.jpg" width="154" height="106" title="1.jpg" border="0"></a>
+<a href="baitian/target2.html"><img align="center" src="baitian/thumbnails/2.jpg" width="154" height="106" title="2.jpg" border="0"></a>
+<a href="baitian/target3.html"><img align="center" src="baitian/thumbnails/3.jpg" width="154" height="106" title="3.jpg" border="0"></a>
+<a href="baitian/target4.html"><img align="center" src="baitian/thumbnails/4.jpg" width="106" height="154" title="4.jpg" border="0"></a>
+<a href="baitian/target5.html"><img align="center" src="baitian/thumbnails/5.jpg" width="106" height="154" title="5.jpg" border="0"></a>
+<a href="baitian/target6.html"><img align="center" src="baitian/thumbnails/5i3c0075.jpg" width="154" height="106" title="5i3c0075.jpg" border="0"></a>
+<a href="baitian/target7.html"><img align="center" src="baitian/thumbnails/5i3c0076.jpg" width="106" height="154" title="5i3c0076.jpg" border="0"></a>
+<a href="baitian/target8.html"><img align="center" src="baitian/thumbnails/5i3c0077.jpg" width="154" height="106" title="5i3c0077.jpg" border="0"></a>
+<a href="baitian/target9.html"><img align="center" src="baitian/thumbnails/5i3c0078.jpg" width="106" height="154" title="5i3c0078.jpg" border="0"></a>
+<a href="baitian/target10.html"><img align="center" src="baitian/thumbnails/5i3c0079.jpg" width="106" height="154" title="5i3c0079.jpg" border="0"></a>
+<a href="baitian/target11.html"><img align="center" src="baitian/thumbnails/5i3c0080.jpg" width="154" height="106" title="5i3c0080.jpg" border="0"></a>
+<a href="baitian/target12.html"><img align="center" src="baitian/thumbnails/5i3c0081.jpg" width="106" height="154" title="5i3c0081.jpg" border="0"></a>
+<a href="baitian/target13.html"><img align="center" src="baitian/thumbnails/5i3c0083.jpg" width="106" height="154" title="5i3c0083.jpg" border="0"></a>
+<a href="baitian/target14.html"><img align="center" src="baitian/thumbnails/5i3c0084.jpg" width="154" height="106" title="5i3c0084.jpg" border="0"></a>
+<a href="baitian/target15.html"><img align="center" src="baitian/thumbnails/5i3c0086.jpg" width="106" height="154" title="5i3c0086.jpg" border="0"></a>
+<a href="baitian/target16.html"><img align="center" src="baitian/thumbnails/5i3c0088.jpg" width="106" height="154" title="5i3c0088.jpg" border="0"></a>
+<a href="baitian/target17.html"><img align="center" src="baitian/thumbnails/5i3c0090.jpg" width="106" height="154" title="5i3c0090.jpg" border="0"></a>
+<a href="baitian/target18.html"><img align="center" src="baitian/thumbnails/5i3c0091.jpg" width="106" height="154" title="5i3c0091.jpg" border="0"></a>
+<a href="baitian/target19.html"><img align="center" src="baitian/thumbnails/5i3c0092.jpg" width="106" height="154" title="5i3c0092.jpg" border="0"></a>
+<a href="baitian/target20.html"><img align="center" src="baitian/thumbnails/5i3c0094.jpg" width="154" height="106" title="5i3c0094.jpg" border="0"></a>
+<a href="baitian/target21.html"><img align="center" src="baitian/thumbnails/5i3c0095.jpg" width="154" height="106" title="5i3c0095.jpg" border="0"></a>
+<a href="baitian/target22.html"><img align="center" src="baitian/thumbnails/5i3c0097.jpg" width="154" height="106" title="5i3c0097.jpg" border="0"></a>
+<a href="baitian/target23.html"><img align="center" src="baitian/thumbnails/5i3c0100.jpg" width="154" height="106" title="5i3c0100.jpg" border="0"></a>
+<a href="baitian/target24.html"><img align="center" src="baitian/thumbnails/5i3c0101.jpg" width="154" height="106" title="5i3c0101.jpg" border="0"></a>
+<a href="baitian/target25.html"><img align="center" src="baitian/thumbnails/5i3c0102.jpg" width="106" height="154" title="5i3c0102.jpg" border="0"></a>
+<a href="baitian/target26.html"><img align="center" src="baitian/thumbnails/5i3c0103.jpg" width="154" height="106" title="5i3c0103.jpg" border="0"></a>
+<a href="baitian/target27.html"><img align="center" src="baitian/thumbnails/5i3c0104.jpg" width="154" height="106" title="5i3c0104.jpg" border="0"></a>
+<a href="baitian/target28.html"><img align="center" src="baitian/thumbnails/5i3c0105.jpg" width="106" height="154" title="5i3c0105.jpg" border="0"></a>
+<a href="baitian/target29.html"><img align="center" src="baitian/thumbnails/5i3c0106.jpg" width="106" height="154" title="5i3c0106.jpg" border="0"></a>
+<a href="baitian/target30.html"><img align="center" src="baitian/thumbnails/5i3c0108.jpg" width="106" height="154" title="5i3c0108.jpg" border="0"></a>
+<a href="baitian/target31.html"><img align="center" src="baitian/thumbnails/5i3c0114.jpg" width="154" height="106" title="5i3c0114.jpg" border="0"></a>
+<a href="baitian/target32.html"><img align="center" src="baitian/thumbnails/5i3c0117.jpg" width="154" height="106" title="5i3c0117.jpg" border="0"></a>
+<a href="baitian/target33.html"><img align="center" src="baitian/thumbnails/5i3c0119.jpg" width="154" height="106" title="5i3c0119.jpg" border="0"></a>
+<a href="baitian/target34.html"><img align="center" src="baitian/thumbnails/5i3c0120.jpg" width="106" height="154" title="5i3c0120.jpg" border="0"></a>
+<a href="baitian/target35.html"><img align="center" src="baitian/thumbnails/5i3c0121.jpg" width="106" height="154" title="5i3c0121.jpg" border="0"></a>
+<a href="baitian/target36.html"><img align="center" src="baitian/thumbnails/5i3c0123.jpg" width="154" height="106" title="5i3c0123.jpg" border="0"></a>
+<a href="baitian/target37.html"><img align="center" src="baitian/thumbnails/5i3c0124.jpg" width="154" height="109" title="5i3c0124.jpg" border="0"></a>
+<a href="baitian/target38.html"><img align="center" src="baitian/thumbnails/5i3c0125.jpg" width="154" height="106" title="5i3c0125.jpg" border="0"></a>
+<a href="baitian/target39.html"><img align="center" src="baitian/thumbnails/5i3c0126.jpg" width="154" height="106" title="5i3c0126.jpg" border="0"></a>
+<a href="baitian/target40.html"><img align="center" src="baitian/thumbnails/5i3c0127.jpg" width="154" height="106" title="5i3c0127.jpg" border="0"></a>
+<a href="baitian/target41.html"><img align="center" src="baitian/thumbnails/5i3c0129.jpg" width="106" height="154" title="5i3c0129.jpg" border="0"></a>
+<a href="baitian/target42.html"><img align="center" src="baitian/thumbnails/5i3c0131.jpg" width="154" height="106" title="5i3c0131.jpg" border="0"></a>
+<a href="baitian/target43.html"><img align="center" src="baitian/thumbnails/5i3c0136.jpg" width="106" height="154" title="5i3c0136.jpg" border="0"></a>
+<a href="baitian/target44.html"><img align="center" src="baitian/thumbnails/5i3c0138.jpg" width="106" height="154" title="5i3c0138.jpg" border="0"></a>
+<a href="baitian/target45.html"><img align="center" src="baitian/thumbnails/5i3c0142.jpg" width="154" height="106" title="5i3c0142.jpg" border="0"></a>
+<a href="baitian/target46.html"><img align="center" src="baitian/thumbnails/5i3c0146.jpg" width="106" height="154" title="5i3c0146.jpg" border="0"></a>
+<a href="baitian/target47.html"><img align="center" src="baitian/thumbnails/5i3c0149.jpg" width="106" height="154" title="5i3c0149.jpg" border="0"></a>
+<a href="baitian/target48.html"><img align="center" src="baitian/thumbnails/5i3c0150.jpg" width="154" height="106" title="5i3c0150.jpg" border="0"></a>
+<a href="baitian/target49.html"><img align="center" src="baitian/thumbnails/5i3c0152.jpg" width="154" height="106" title="5i3c0152.jpg" border="0"></a>
+<a href="baitian/target50.html"><img align="center" src="baitian/thumbnails/5i3c0153.jpg" width="154" height="106" title="5i3c0153.jpg" border="0"></a>
+<a href="baitian/target51.html"><img align="center" src="baitian/thumbnails/5i3c0154.jpg" width="154" height="106" title="5i3c0154.jpg" border="0"></a>
+<a href="baitian/target52.html"><img align="center" src="baitian/thumbnails/5i3c0155.jpg" width="106" height="154" title="5i3c0155.jpg" border="0"></a>
+<a href="baitian/target53.html"><img align="center" src="baitian/thumbnails/5i3c0157.jpg" width="154" height="106" title="5i3c0157.jpg" border="0"></a>
+<a href="baitian/target54.html"><img align="center" src="baitian/thumbnails/5i3c0163.jpg" width="106" height="154" title="5i3c0163.jpg" border="0"></a>
+<a href="baitian/target55.html"><img align="center" src="baitian/thumbnails/5i3c0164.jpg" width="154" height="106" title="5i3c0164.jpg" border="0"></a>
+<a href="baitian/target56.html"><img align="center" src="baitian/thumbnails/5i3c0165.jpg" width="154" height="106" title="5i3c0165.jpg" border="0"></a>
+<a href="baitian/target57.html"><img align="center" src="baitian/thumbnails/5i3c0166.jpg" width="106" height="154" title="5i3c0166.jpg" border="0"></a>
+<a href="baitian/target58.html"><img align="center" src="baitian/thumbnails/5i3c0169.jpg" width="154" height="106" title="5i3c0169.jpg" border="0"></a>
+<a href="baitian/target59.html"><img align="center" src="baitian/thumbnails/5i3c0171.jpg" width="106" height="154" title="5i3c0171.jpg" border="0"></a>
+<a href="baitian/target60.html"><img align="center" src="baitian/thumbnails/5i3c0172.jpg" width="106" height="154" title="5i3c0172.jpg" border="0"></a>
+<a href="baitian/target61.html"><img align="center" src="baitian/thumbnails/5i3c0175.jpg" width="154" height="106" title="5i3c0175.jpg" border="0"></a>
+<a href="baitian/target62.html"><img align="center" src="baitian/thumbnails/5i3c0176.jpg" width="154" height="106" title="5i3c0176.jpg" border="0"></a>
+<a href="baitian/target63.html"><img align="center" src="baitian/thumbnails/5i3c0179.jpg" width="154" height="105" title="5i3c0179.jpg" border="0"></a>
+<a href="baitian/target64.html"><img align="center" src="baitian/thumbnails/5i3c0180.jpg" width="154" height="106" title="5i3c0180.jpg" border="0"></a>
+<a href="baitian/target65.html"><img align="center" src="baitian/thumbnails/5i3c0183.jpg" width="154" height="106" title="5i3c0183.jpg" border="0"></a>
+<a href="baitian/target66.html"><img align="center" src="baitian/thumbnails/5i3c0185.jpg" width="154" height="106" title="5i3c0185.jpg" border="0"></a>
+<a href="baitian/target67.html"><img align="center" src="baitian/thumbnails/5i3c0186.jpg" width="154" height="106" title="5i3c0186.jpg" border="0"></a>
+<a href="baitian/target68.html"><img align="center" src="baitian/thumbnails/5i3c0187.jpg" width="154" height="106" title="5i3c0187.jpg" border="0"></a>
+<a href="baitian/target69.html"><img align="center" src="baitian/thumbnails/5i3c0188.jpg" width="154" height="106" title="5i3c0188.jpg" border="0"></a>
+<a href="baitian/target70.html"><img align="center" src="baitian/thumbnails/5i3c0190.jpg" width="154" height="106" title="5i3c0190.jpg" border="0"></a>
+<a href="baitian/target71.html"><img align="center" src="baitian/thumbnails/5i3c0191.jpg" width="106" height="154" title="5i3c0191.jpg" border="0"></a>
+<a href="baitian/target72.html"><img align="center" src="baitian/thumbnails/5i3c0197.jpg" width="106" height="154" title="5i3c0197.jpg" border="0"></a>
+<a href="baitian/target73.html"><img align="center" src="baitian/thumbnails/5i3c0198.jpg" width="154" height="106" title="5i3c0198.jpg" border="0"></a>
+<a href="baitian/target74.html"><img align="center" src="baitian/thumbnails/5i3c0200.jpg" width="106" height="154" title="5i3c0200.jpg" border="0"></a>
+<a href="baitian/target75.html"><img align="center" src="baitian/thumbnails/5i3c0202.jpg" width="106" height="154" title="5i3c0202.jpg" border="0"></a>
+<a href="baitian/target76.html"><img align="center" src="baitian/thumbnails/5i3c0204.jpg" width="106" height="154" title="5i3c0204.jpg" border="0"></a>
+<a href="baitian/target77.html"><img align="center" src="baitian/thumbnails/5i3c0205.jpg" width="154" height="106" title="5i3c0205.jpg" border="0"></a>
+<a href="baitian/target78.html"><img align="center" src="baitian/thumbnails/5i3c0206.jpg" width="106" height="154" title="5i3c0206.jpg" border="0"></a>
+<a href="baitian/target79.html"><img align="center" src="baitian/thumbnails/5i3c0209.jpg" width="104" height="154" title="5i3c0209.jpg" border="0"></a>
+<a href="baitian/target80.html"><img align="center" src="baitian/thumbnails/5i3c0210.jpg" width="105" height="154" title="5i3c0210.jpg" border="0"></a>
+<a href="baitian/target81.html"><img align="center" src="baitian/thumbnails/5i3c0211.jpg" width="154" height="106" title="5i3c0211.jpg" border="0"></a>
+<a href="baitian/target82.html"><img align="center" src="baitian/thumbnails/5i3c0213.jpg" width="106" height="154" title="5i3c0213.jpg" border="0"></a>
+<a href="baitian/target83.html"><img align="center" src="baitian/thumbnails/5i3c0216.jpg" width="154" height="106" title="5i3c0216.jpg" border="0"></a>
+<a href="baitian/target84.html"><img align="center" src="baitian/thumbnails/5i3c0217.jpg" width="106" height="154" title="5i3c0217.jpg" border="0"></a>
+<a href="baitian/target85.html"><img align="center" src="baitian/thumbnails/5i3c0220.jpg" width="154" height="106" title="5i3c0220.jpg" border="0"></a>
+<a href="baitian/target86.html"><img align="center" src="baitian/thumbnails/5i3c0222.jpg" width="111" height="154" title="5i3c0222.jpg" border="0"></a>
+<a href="baitian/target87.html"><img align="center" src="baitian/thumbnails/5i3c0225.jpg" width="106" height="154" title="5i3c0225.jpg" border="0"></a>
+<a href="baitian/target88.html"><img align="center" src="baitian/thumbnails/5i3c0229.jpg" width="154" height="106" title="5i3c0229.jpg" border="0"></a>
+<a href="baitian/target89.html"><img align="center" src="baitian/thumbnails/5i3c0230.jpg" width="106" height="154" title="5i3c0230.jpg" border="0"></a>
+<a href="baitian/target90.html"><img align="center" src="baitian/thumbnails/5i3c0231.jpg" width="106" height="154" title="5i3c0231.jpg" border="0"></a>
+<a href="baitian/target91.html"><img align="center" src="baitian/thumbnails/5i3c0232.jpg" width="106" height="154" title="5i3c0232.jpg" border="0"></a>
+<a href="baitian/target92.html"><img align="center" src="baitian/thumbnails/5i3c0234.jpg" width="154" height="106" title="5i3c0234.jpg" border="0"></a>
+<a href="baitian/target93.html"><img align="center" src="baitian/thumbnails/5i3c0235.jpg" width="106" height="154" title="5i3c0235.jpg" border="0"></a>
+<a href="baitian/target94.html"><img align="center" src="baitian/thumbnails/5i3c0238.jpg" width="104" height="154" title="5i3c0238.jpg" border="0"></a>
+<a href="baitian/target95.html"><img align="center" src="baitian/thumbnails/5i3c0242.jpg" width="154" height="106" title="5i3c0242.jpg" border="0"></a>
+<a href="baitian/target96.html"><img align="center" src="baitian/thumbnails/5i3c0246.jpg" width="154" height="106" title="5i3c0246.jpg" border="0"></a>
+<a href="baitian/target97.html"><img align="center" src="baitian/thumbnails/5i3c0251.jpg" width="154" height="106" title="5i3c0251.jpg" border="0"></a>
+<a href="baitian/target98.html"><img align="center" src="baitian/thumbnails/5i3c0254.jpg" width="106" height="154" title="5i3c0254.jpg" border="0"></a>
+<a href="baitian/target99.html"><img align="center" src="baitian/thumbnails/5i3c0255.jpg" width="106" height="154" title="5i3c0255.jpg" border="0"></a>
+<a href="baitian/target100.html"><img align="center" src="baitian/thumbnails/5i3c0256.jpg" width="106" height="154" title="5i3c0256.jpg" border="0"></a>
+<a href="baitian/target101.html"><img align="center" src="baitian/thumbnails/5i3c0257.jpg" width="154" height="106" title="5i3c0257.jpg" border="0"></a>
+<a href="baitian/target102.html"><img align="center" src="baitian/thumbnails/5i3c0260.jpg" width="154" height="106" title="5i3c0260.jpg" border="0"></a>
+<a href="baitian/target103.html"><img align="center" src="baitian/thumbnails/5i3c0262.jpg" width="106" height="154" title="5i3c0262.jpg" border="0"></a>
+<a href="baitian/target104.html"><img align="center" src="baitian/thumbnails/5i3c0263.jpg" width="103" height="154" title="5i3c0263.jpg" border="0"></a>
+<a href="baitian/target105.html"><img align="center" src="baitian/thumbnails/5i3c0264.jpg" width="106" height="154" title="5i3c0264.jpg" border="0"></a>
+<a href="baitian/target106.html"><img align="center" src="baitian/thumbnails/5i3c0266.jpg" width="106" height="154" title="5i3c0266.jpg" border="0"></a>
+<a href="baitian/target107.html"><img align="center" src="baitian/thumbnails/5i3c0269.jpg" width="106" height="154" title="5i3c0269.jpg" border="0"></a>
+<a href="baitian/target108.html"><img align="center" src="baitian/thumbnails/5i3c0271.jpg" width="106" height="154" title="5i3c0271.jpg" border="0"></a>
+<a href="baitian/target109.html"><img align="center" src="baitian/thumbnails/5i3c0275.jpg" width="106" height="154" title="5i3c0275.jpg" border="0"></a>
+<a href="baitian/target110.html"><img align="center" src="baitian/thumbnails/5i3c0276.jpg" width="106" height="154" title="5i3c0276.jpg" border="0"></a>
+<a href="baitian/target111.html"><img align="center" src="baitian/thumbnails/5i3c0277.jpg" width="106" height="154" title="5i3c0277.jpg" border="0"></a>
+<a href="baitian/target112.html"><img align="center" src="baitian/thumbnails/5i3c0281.jpg" width="106" height="154" title="5i3c0281.jpg" border="0"></a>
+<a href="baitian/target113.html"><img align="center" src="baitian/thumbnails/5i3c0283.jpg" width="106" height="154" title="5i3c0283.jpg" border="0"></a>
+<a href="baitian/target114.html"><img align="center" src="baitian/thumbnails/5i3c0284.jpg" width="105" height="154" title="5i3c0284.jpg" border="0"></a>
+<a href="baitian/target115.html"><img align="center" src="baitian/thumbnails/5i3c0286.jpg" width="106" height="154" title="5i3c0286.jpg" border="0"></a>
+<a href="baitian/target116.html"><img align="center" src="baitian/thumbnails/5i3c0287.jpg" width="106" height="154" title="5i3c0287.jpg" border="0"></a>
+<a href="baitian/target117.html"><img align="center" src="baitian/thumbnails/5i3c0288.jpg" width="106" height="154" title="5i3c0288.jpg" border="0"></a>
+<a href="baitian/target118.html"><img align="center" src="baitian/thumbnails/5i3c0291.jpg" width="106" height="154" title="5i3c0291.jpg" border="0"></a>
+<a href="baitian/target119.html"><img align="center" src="baitian/thumbnails/5i3c0292.jpg" width="154" height="106" title="5i3c0292.jpg" border="0"></a>
+<a href="baitian/target120.html"><img align="center" src="baitian/thumbnails/5i3c0294.jpg" width="154" height="106" title="5i3c0294.jpg" border="0"></a>
+<a href="baitian/target121.html"><img align="center" src="baitian/thumbnails/5i3c0295.jpg" width="106" height="154" title="5i3c0295.jpg" border="0"></a>
+<a href="baitian/target122.html"><img align="center" src="baitian/thumbnails/5i3c0304.jpg" width="154" height="106" title="5i3c0304.jpg" border="0"></a>
+<a href="baitian/target123.html"><img align="center" src="baitian/thumbnails/5i3c0306.jpg" width="106" height="154" title="5i3c0306.jpg" border="0"></a>
+<a href="baitian/target124.html"><img align="center" src="baitian/thumbnails/5i3c0307.jpg" width="106" height="154" title="5i3c0307.jpg" border="0"></a>
+<a href="baitian/target125.html"><img align="center" src="baitian/thumbnails/5i3c0314.jpg" width="106" height="154" title="5i3c0314.jpg" border="0"></a>
+<a href="baitian/target126.html"><img align="center" src="baitian/thumbnails/5i3c0318.jpg" width="154" height="111" title="5i3c0318.jpg" border="0"></a>
+<a href="baitian/target127.html"><img align="center" src="baitian/thumbnails/5i3c0321.jpg" width="106" height="154" title="5i3c0321.jpg" border="0"></a>
+<a href="baitian/target128.html"><img align="center" src="baitian/thumbnails/5i3c0326.jpg" width="154" height="106" title="5i3c0326.jpg" border="0"></a>
+<a href="baitian/target129.html"><img align="center" src="baitian/thumbnails/6.jpg" width="154" height="106" title="6.jpg" border="0"></a>
+<a href="baitian/target130.html"><img align="center" src="baitian/thumbnails/7.jpg" width="154" height="106" title="7.jpg" border="0"></a>
+<a href="baitian/target131.html"><img align="center" src="baitian/thumbnails/8.jpg" width="154" height="106" title="8.jpg" border="0"></a>
+<a href="baitian/target132.html"><img align="center" src="baitian/thumbnails/9.jpg" width="154" height="106" title="9.jpg" border="0"></a>
+<a href="baitian/target133.html"><img align="center" src="baitian/thumbnails/10.jpg" width="154" height="106" title="10.jpg" border="0"></a>
+<a href="baitian/target134.html"><img align="center" src="baitian/thumbnails/11.jpg" width="154" height="106" title="11.jpg" border="0"></a>
+<a href="baitian/target135.html"><img align="center" src="baitian/thumbnails/12.jpg" width="154" height="106" title="12.jpg" border="0"></a>
+<a href="baitian/target136.html"><img align="center" src="baitian/thumbnails/13.jpg" width="154" height="106" title="13.jpg" border="0"></a>
+<a href="baitian/target137.html"><img align="center" src="baitian/thumbnails/789788.jpg" width="106" height="154" title="789788.jpg" border="0"></a>
+<a href="baitian/target138.html"><img align="center" src="baitian/thumbnails/img20220910095049.jpg" width="118" height="154" title="img20220910095049.jpg" border="0"></a>
+<a href="baitian/target139.html"><img align="center" src="baitian/thumbnails/img20220910091646.jpg" width="118" height="154" title="img20220910091646.jpg" border="0"></a>
+<a href="baitian/target140.html"><img align="center" src="baitian/thumbnails/img20220910092927.jpg" width="91" height="154" title="img20220910092927.jpg" border="0"></a>
+<a href="baitian/target141.html"><img align="center" src="baitian/thumbnails/img20220910093433.jpg" width="91" height="154" title="img20220910093433.jpg" border="0"></a>
+<a href="baitian/target142.html"><img align="center" src="baitian/thumbnails/img20220910093441.jpg" width="91" height="154" title="img20220910093441.jpg" border="0"></a>
+<a href="baitian/target143.html"><img align="center" src="baitian/thumbnails/img20220910093443.jpg" width="91" height="154" title="img20220910093443.jpg" border="0"></a>
+<a href="baitian/target144.html"><img align="center" src="baitian/thumbnails/img20220910093444.jpg" width="91" height="154" title="img20220910093444.jpg" border="0"></a>
+<a href="baitian/target145.html"><img align="center" src="baitian/thumbnails/img20220910094233.jpg" width="118" height="154" title="img20220910094233.jpg" border="0"></a>
+<a href="baitian/target146.html"><img align="center" src="baitian/thumbnails/img20220910094235.jpg" width="118" height="154" title="img20220910094235.jpg" border="0"></a>
+<a href="baitian/target147.html"><img align="center" src="baitian/thumbnails/img20220910094241.jpg" width="118" height="154" title="img20220910094241.jpg" border="0"></a>
+<a href="baitian/target148.html"><img align="center" src="baitian/thumbnails/img20220910095044.jpg" width="118" height="154" title="img20220910095044.jpg" border="0"></a>
+<a href="baitian/target149.html"><img align="center" src="baitian/thumbnails/img20220910095046.jpg" width="118" height="154" title="img20220910095046.jpg" border="0"></a>
+<a href="baitian/target150.html"><img align="center" src="baitian/thumbnails/img20220910095047.jpg" width="118" height="154" title="img20220910095047.jpg" border="0"></a>
+<a href="baitian/target151.html"><img align="center" src="baitian/thumbnails/img20220910095048.jpg" width="118" height="154" title="img20220910095048.jpg" border="0"></a>
+<map name="Map">
+  <area shape="rect" coords="95,1,129,44" href="frameset.htm">
+</map>
+
     <!-- Footer Area Start -->
-    <footer class="footer-area">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-12 h-100">
-                    <div class="footer-content h-100 d-md-flex align-items-center justify-content-between">
-                        <!-- Single Footer Content -->
-                       
-                        <!-- Single Footer Content -->
-                        
-                        <!-- Single Footer Content -->
-                        <div class="single-footer-content">
-                            <img src="img/core-img/envelope-2.png" alt="">
-                            <a href="#">520vista@163.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+
     <!-- Footer Area End -->
 
     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

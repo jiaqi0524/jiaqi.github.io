@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="cn">
 
 <head>
@@ -20,7 +20,14 @@
 
     <!-- Responsive CSS -->
     <link href="css/responsive.css" rel="stylesheet">
-
+    <style>
+        .jz{          
+            height: 50px;
+            text-align: center;
+            background-color: black;
+            line-height: 50px;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,16 +39,6 @@
                     <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
                 </svg>
             </div>
-        </div>
-        <div class="questions-area text-center">
-            <p>你喜欢我吗?</p>
-            <ul>
-                <li></li>
-                <li></li>
-                <li> </li>
-                <li> </li>
-                <li> </li>
-            </ul>
         </div>
     </div>
 
@@ -56,7 +53,7 @@
                     <div class="main-menu h-100">
                         <nav class="navbar h-100 navbar-expand-lg">
                             <!-- Logo Area  -->
-                            <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt="Logo"></a>
+                            <a class="navbar-brand" href="index1.html"><img src="img/core-img/logo.png" alt="Logo"></a>
 
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#studioMenu" aria-controls="studioMenu" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i> 菜单</button>
 
@@ -64,21 +61,20 @@
                                 <!-- Menu Area Start  -->
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="index.html">主页 <span class="sr-only">(current)</span></a>
+                                        <a class="nav-link" href="index1.html">主页 <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">页面</a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="index.html">主页</a>
-                                            <a class="dropdown-item" href="about-me.html">关于</a>
+                                            <a class="dropdown-item" href="index1.html">主页</a>
+                                            <a class="dropdown-item" href="#">关于</a>
                                             <a class="dropdown-item" href="portfolio.html">影集</a>
                                             <a class="dropdown-item" href="blog.html">心语</a>
                                             <a class="dropdown-item" href="#">联系</a>
-                                            <a class="dropdown-item" href="#">基础</a>
                                         </div>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="about-me.html">关于</a>
+                                        <a class="nav-link" href="#">关于</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="portfolio.html">影集</a>
@@ -91,16 +87,9 @@
                                     </li>
                                 </ul>
                                 <!-- Search Form -->
-                                <div class="header-search-form ml-auto">
-                                    <form action="#">
-                                        <input type="search" class="form-control" placeholder="Input your keyword then press enter..." id="search" name="search">
-                                        <input class="d-none" type="submit" value="submit">
-                                    </form>
-                                </div>
+
                                 <!-- Search btn -->
-                                <div id="searchbtn">
-                                    <img src="img/core-img/search.png" alt="">
-                                </div>
+
                             </div>
                         </nav>
                     </div>
@@ -127,129 +116,15 @@
                         <h2>自我介绍</h2>
                         <p>欢迎来到我的成长记录空间，我叫刘嘉祺，是一个帅气又可爱的男宝宝。现在我还不会说话，但我可是一个小聪明，你可以凝视我的眼睛，会感受到我想要说的话，如果你对我“咯咯咯”的逗玩，我还会报以微笑呢。我现在可乖了，每天吃好喝好睡好，白天玩耍，晚上睡觉，当然，我也会有不开心的时候，我不开心我就会咿咿呀呀的吵他们，谁叫他们不顺我的心意呢？我小我任性，你大你忍着。现在每天都是爸爸妈妈和奶奶陪着我，感觉好无聊呀，好想有新伙伴陪我玩呢，你愿意吗？</p>
                     </div>
-                </div>
-                <div class="col-10">
-                    <div class="row">
-                        <div class="col-12 col-md-4">
-                            <div class="single-service-area section_padding_0_100 text-center wow fadeInUp" data-wow-delay="0.1s">
-                                <img src="img/core-img/heart.png" alt="">
-                                <h5> </h5>
-                                <p> </p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <div class="single-service-area section_padding_0_100 text-center wow fadeInUp" data-wow-delay="0.4s">
-                                <img src="img/core-img/photo-camera.png" alt="">
-                                <h5> </h5>
-                                <p> </p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <div class="single-service-area section_padding_0_100 text-center wow fadeInUp" data-wow-delay="0.9s">
-                                <img src="img/core-img/video-camera.png" alt="">
-                                <h5> </h5>
-                                <p> </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10">
-                    <!-- Pie Bars Area Start -->
-                    <div class="our-skills-area text-center">
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-md-3">
-                                <div class="single-pie-bar" data-percent="75">
-                                    <canvas class="bar-circle" width="100" height="100"></canvas>
-                                    <h6>搞怪</h6>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-3">
-                                <div class="single-pie-bar" data-percent="83">
-                                    <canvas class="bar-circle" width="100" height="100"></canvas>
-                                    <h6>肖像</h6>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-3">
-                                <div class="single-pie-bar" data-percent="25">
-                                    <canvas class="bar-circle" width="100" height="100"></canvas>
-                                    <h6>日常</h6>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-3">
-                                <div class="single-pie-bar" data-percent="95">
-                                    <canvas class="bar-circle" width="100" height="100"></canvas>
-                                    <h6>百日</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> 
             </div>
         </div>
     </section>
-    <!-- About Me Area End -->
-
-    <!-- Follow Me Instagram Area Start -->
-    <section class="follow-me-instagram-area clearfix">
-        <div class="container">
-            <div class="row">
-                <div class="col-11 ml-auto">
-                    <div class="follow-me-title">
-                        <h5>图片分享</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Instagram Feeds Area -->
-        <div class="instagram-feeds-area owl-carousel">
-            <div class="single-instagram-feeds">
-                <img src="img/bg-img/i1.jpg" alt="">
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </div>
-            <div class="single-instagram-feeds">
-                <img src="img/bg-img/i2.jpg" alt="">
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </div>
-            <div class="single-instagram-feeds">
-                <img src="img/bg-img/i3.jpg" alt="">
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </div>
-            <div class="single-instagram-feeds">
-                <img src="img/bg-img/i4.jpg" alt="">
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </div>
-            <div class="single-instagram-feeds">
-                <img src="img/bg-img/i5.jpg" alt="">
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </div>
-            <div class="single-instagram-feeds">
-                <img src="img/bg-img/i6.jpg" alt="">
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </div>
-            <div class="single-instagram-feeds">
-                <img src="img/bg-img/i7.jpg" alt="">
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </section>
-    <!-- Follow Me Instagram Area End -->
+    <!-- About Me Area End -->   
 
     <!-- Footer Area Start -->
-    <footer class="footer-area">
-        <div class="container-fluid h-100">
-            <div class="row h-100">
-                <div class="col-12 h-100">
-                    <div class="footer-content h-100 d-md-flex align-items-center justify-content-between">
-                       
-                        <!-- Single Footer Content -->
-                        <div class="single-footer-content">
-                            <img src="img/core-img/envelope-2.png" alt="">
-                            <a href="#">520vista@163.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <footer class="jz">   
+        <a href="https://beian.miit.gov.cn" target="_blank" style="color: white;">赣ICP备2022008720号-1</a>
     </footer>
     <!-- Footer Area End -->
 
